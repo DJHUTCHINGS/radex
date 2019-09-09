@@ -19,7 +19,7 @@ class About extends Component {
     render() {
       return (
         <div className="">
-            <h1>About</h1>
+            <h1>About component is loaded</h1>
         </div>
       );
     }

@@ -1,7 +1,16 @@
 import React, { Component } from "react";
 import './main.css';
 
-// import OTHERCOMPONENTS from "../FOLDER/JSFILE";
+
+import InputField from "../input-field/input-field";
+import InputCommentsBox from "../input-comments-box/input-comments-box";
+import InputComment from "../input-comment/input-comment";
+import OutputCharsBox from "../output-chars-box/output-chars-box";
+import OutputChar from "../output-char/output-char";
+import OutputCommentsBox from "../output-comments-box/output-comments-box";
+import OutputComment from "../output-comment/output-comment";
+
+import ScoreDisplay from "../score-display/score-display";
 
 
 class Main extends Component {
@@ -19,7 +28,17 @@ class Main extends Component {
     render() {
       return (
         <div className="">
-            <h1>tst</h1>
+          
+           
+           <InputField />
+           <InputCommentsBox />
+           <InputComment />
+           <OutputCharsBox />
+           <OutputChar />
+           <OutputCommentsBox />
+           <OutputComment />
+           
+           <ScoreDisplay />
         </div>
       );
     }

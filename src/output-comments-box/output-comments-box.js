@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import './output-comments-box.css';
+import './output-comments-box.css';
 
 // import OTHERCOMPONENTS from "../FOLDER/JSFILE";
 
@@ -24,7 +24,7 @@ class OutputCommentsBox extends Component {
     render() {
       return (
         <div className="">
-
+            <h4>the outbut comments box is loaded</h4>
         </div>
       );
     }

@@ -24,7 +24,7 @@ class InputTips extends Component {
     render() {
       return (
         <div className="">
-
+            <h3>Input tips box is loaded</h3>
         </div>
       );
     }

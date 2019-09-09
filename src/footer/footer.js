@@ -1,14 +1,10 @@
 import React, { Component } from "react";
-import './header.css';
-
-import NavBar from "../nav-bar/nav-bar"
-
-
+import './footer.css';
 
 // import OTHERCOMPONENTS from "../FOLDER/JSFILE";
 
 
-class Header extends Component {
+class Footer extends Component {
     // probably not needed here
     constructor(){
         super()
@@ -22,12 +18,11 @@ class Header extends Component {
 
     render() {
       return (
-        <div className="header">
-            <h1>Header comp is loaded</h1>
-            <NavBar />
+        <div className="footer">
+            <h1>Footer component is loaded</h1>
         </div>
       );
     }
   }
   
-  export default Header;
+  export default Footer;

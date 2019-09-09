@@ -1,10 +1,13 @@
 import React, { Component } from "react";
-// import './input-comment-box.css';
+import './nav-bar.css';
+
+
 
 // import OTHERCOMPONENTS from "../FOLDER/JSFILE";
 
 
-class InputCommentsBox extends Component {
+class NavBar extends Component {
+    // probably not needed here
     constructor(){
         super()
         this.state = {
@@ -13,21 +16,15 @@ class InputCommentsBox extends Component {
         }
       }
 
-    // METHODNAME = event => {
-    // event.preventDefault()
-
-    // .then( response => console.log(response))
-    // }
-    
-
+ 
 
     render() {
       return (
         <div className="">
-            <h3> input comment box is loaded</h3>
+            <h1>Nav is loaded</h1>
         </div>
       );
     }
   }
   
-  export default InputCommentsBox;
+  export default NavBar;

@@ -24,7 +24,7 @@ class OutputCharsBox extends Component {
     render() {
       return (
         <div className="">
-
+            <h3>output chars box is loaded</h3>
         </div>
       );
     }

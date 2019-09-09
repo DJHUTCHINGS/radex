@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-// import './input-comment-box.css';
+import './score-display.css';
 
 // import OTHERCOMPONENTS from "../FOLDER/JSFILE";
 
 
-class InputCommentsBox extends Component {
+class ScoreDisplay extends Component {
     constructor(){
         super()
         this.state = {
@@ -23,11 +23,12 @@ class InputCommentsBox extends Component {
 
     render() {
       return (
-        <div className="">
-            <h3> input comment box is loaded</h3>
+        <div className="score-display test">
+            <h4>the score display is loaded</h4>
+            <p>NOTE: This is for testing purposes only</p>
         </div>
       );
     }
   }
   
-  export default InputCommentsBox;
+  export default ScoreDisplay;
