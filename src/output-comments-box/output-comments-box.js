@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-// import './XXX.css';
+// import './output-comments-box.css';
 
 // import OTHERCOMPONENTS from "../FOLDER/JSFILE";
 
 
-class CLASSNAME extends Component {
+class OutputCommentsBox extends Component {
     constructor(){
         super()
         this.state = {
@@ -30,4 +30,4 @@ class CLASSNAME extends Component {
     }
   }
   
-  export default CLASSNAME;
+  export default OutputCommentsBox;

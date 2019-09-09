@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-// import './input-comment.css';
+import './output-comment.css';
 
 // import OTHERCOMPONENTS from "../FOLDER/JSFILE";
 
 
-class InputComment extends Component {
+class OutputComment extends Component {
     constructor(){
         super()
         this.state = {
@@ -30,4 +30,4 @@ class InputComment extends Component {
     }
   }
   
-  export default InputComment;
+  export default OutputComment;

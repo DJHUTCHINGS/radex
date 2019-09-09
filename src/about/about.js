@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-// import './XXX.css';
+import './about.css';
 
 // import OTHERCOMPONENTS from "../FOLDER/JSFILE";
 
 
-class CLASSNAME extends Component {
+class About extends Component {
+    // probably not needed here
     constructor(){
         super()
         this.state = {
@@ -13,21 +14,15 @@ class CLASSNAME extends Component {
         }
       }
 
-    // METHODNAME = event => {
-    // event.preventDefault()
-
-    // .then( response => console.log(response))
-    // }
-    
-
+ 
 
     render() {
       return (
         <div className="">
-
+            <h1>About</h1>
         </div>
       );
     }
   }
   
-  export default CLASSNAME;
+  export default About;

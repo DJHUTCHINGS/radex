@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-// import './input-comment.css';
+import './header.css';
 
 // import OTHERCOMPONENTS from "../FOLDER/JSFILE";
 
 
-class InputComment extends Component {
+class Header extends Component {
+    // probably not needed here
     constructor(){
         super()
         this.state = {
@@ -13,21 +14,15 @@ class InputComment extends Component {
         }
       }
 
-    // METHODNAME = event => {
-    // event.preventDefault()
-
-    // .then( response => console.log(response))
-    // }
-    
-
+ 
 
     render() {
       return (
         <div className="">
-
+            <h1>About</h1>
         </div>
       );
     }
   }
   
-  export default InputComment;
+  export default Header;
