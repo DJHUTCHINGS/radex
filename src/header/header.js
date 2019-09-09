@@ -23,7 +23,7 @@ class Header extends Component {
     render() {
       return (
         <div className="header">
-            <h1>Header comp is loaded</h1>
+            <h1>Radical Exploder</h1>
             <NavBar />
         </div>
       );

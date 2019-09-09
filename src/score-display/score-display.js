@@ -24,7 +24,7 @@ class ScoreDisplay extends Component {
     render() {
       return (
         <div className="score-display test">
-            <h4>the score display is loaded</h4>
+            <h4>Score Display</h4>
             <p>NOTE: This is for testing purposes only</p>
         </div>
       );

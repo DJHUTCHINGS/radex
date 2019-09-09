@@ -20,8 +20,8 @@ class NavBar extends Component {
 
     render() {
       return (
-        <div className="">
-            <h1>Nav is loaded</h1>
+        <div className="nav-button">
+            <h4>About</h4>
         </div>
       );
     }

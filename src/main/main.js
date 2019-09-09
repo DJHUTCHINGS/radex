@@ -27,7 +27,7 @@ class Main extends Component {
 
     render() {
       return (
-        <div className="">
+        <div className="main">
           
            
            <InputField />

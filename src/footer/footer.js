@@ -19,7 +19,7 @@ class Footer extends Component {
     render() {
       return (
         <div className="footer">
-            <h1>Footer component is loaded</h1>
+            <span className="copyright">© David Hutchings 2019</span>
         </div>
       );
     }
