@@ -24,7 +24,7 @@ class OutputComment extends Component {
     render() {
       return (
         <div className="">
-            <h4>one output comment is loaded</h4>
+            <h5 className="test">one output comment is loaded</h5>
         </div>
       );
     }

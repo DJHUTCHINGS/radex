@@ -23,8 +23,8 @@ class InputComment extends Component {
 
     render() {
       return (
-        <div className="">
-            <h3>one input comment is loaded</h3>
+        <div className="input-comment">
+            <h5 className="test">one input comment is loaded</h5>
         </div>
       );
     }

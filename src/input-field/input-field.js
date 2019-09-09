@@ -27,7 +27,7 @@ class InputField extends Component {
     render() {
       return (
         <div className="">
-            <h3>Input:</h3>
+            <h4 className="input-label">Input:</h4>
             <input className="main-input"></input>
             <InputCommentsBox />
 

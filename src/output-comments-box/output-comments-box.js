@@ -24,7 +24,7 @@ class OutputCommentsBox extends Component {
     render() {
       return (
         <div className="">
-            <h4>the outbut comments box is loaded</h4>
+            <h4 className="test">the outbut comments box is loaded</h4>
         </div>
       );
     }
