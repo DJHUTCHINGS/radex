@@ -1,35 +1,38 @@
 import React, { Component } from "react";
 import './input-field.css';
 
-import InputCommentsBox from "../input-comments-box/input-comments-box";
+// import InputCommentsBox from "../input-comments-box/input-comments-box";
+import InputValidator from "../input-validator/input-validator";
 
 
 // import OTHERCOMPONENTS from "../FOLDER/JSFILE";
 
 
 class InputField extends Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
-        //   PROPERTY:'',
-        //   PROP2:'DEFAULT'
-        }
+          rawInput: "",
+          valid: true,
+        };
+        this.handleInput = this.handleInput.bind(this);
       }
 
-    // METHODNAME = event => {
-    // event.preventDefault()
 
-    // .then( response => console.log(response))
-    // }
-    
+handleInput(event) {
+  this.setState({
+    rawInput: event.target.value,
+  });
+  console.log(this.state.rawInput);
+}
 
 
     render() {
       return (
         <div className="">
             <h4 className="input-label">Input:</h4>
-            <input className="main-input"></input>
-            <InputCommentsBox />
+            <input name="mainInput" type="text" placeholder="Enter Arabic Text Here" className="main-input" onChange={this.handleInput}/>
+            <InputValidator rawInput={this.state.rawInput}/>
 
         </div>
       );

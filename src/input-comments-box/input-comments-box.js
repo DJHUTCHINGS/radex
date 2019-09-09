@@ -7,8 +7,8 @@ import InputComment from "../input-comment/input-comment";
 
 
 class InputCommentsBox extends Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
         //   PROPERTY:'',
         //   PROP2:'DEFAULT'
@@ -27,7 +27,8 @@ class InputCommentsBox extends Component {
       return (
         <div className="">
             <h5 className="test"> input comment box is loaded</h5>
-            <InputComment />
+            <p>This input is {this.props.rawInput}</p>
+            <InputComment testComment={"this is a test input comment that was generated in the comments box and passed down to a comment"}/>
         </div>
       );
     }

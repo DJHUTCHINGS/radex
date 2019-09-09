@@ -8,18 +8,12 @@ class OutputCommentsBox extends Component {
     constructor(){
         super()
         this.state = {
-        //   PROPERTY:'',
-        //   PROP2:'DEFAULT'
+
         }
+
       }
 
-    // METHODNAME = event => {
-    // event.preventDefault()
-
-    // .then( response => console.log(response))
-    // }
-    
-
+ 
 
     render() {
       return (

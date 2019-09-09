@@ -25,6 +25,7 @@ class InputComment extends Component {
       return (
         <div className="input-comment">
             <h5 className="test">one input comment is loaded</h5>
+            <p>{this.props.testComment}</p>
         </div>
       );
     }

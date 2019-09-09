@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       
     <Header />
-    {/* <InputTips /> */}
+    <InputTips />
     <Main />
     <Footer />
 
