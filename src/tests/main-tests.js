@@ -20,7 +20,8 @@ class MainTests extends Component {
         console.log(this.props.rawInput)
       return (
         <div className="">
-            <h5>main test input received is: {this.props.rawInput}</h5>
+            <h5>main test input received is: {this.props.rawInput}. This will not be seen in final</h5>
+        
 
         </div>
       );

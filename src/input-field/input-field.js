@@ -33,6 +33,7 @@ handleInput(event) {
             <h4 className="input-label">Input:</h4>
             <input name="mainInput" type="text" placeholder="Enter Arabic Text Here" className="main-input" onChange={this.handleInput}/>
             <InputValidator rawInput={this.state.rawInput}/>
+           
 
         </div>
       );
