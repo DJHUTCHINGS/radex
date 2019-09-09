@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 
 import InputCommentsBox from "../input-comments-box/input-comments-box";
+import MainTests from "../tests/main-tests";
 
 
 class InputValidator extends Component {
@@ -30,6 +31,7 @@ class InputValidator extends Component {
             <p>Is the input valid?</p>
             <p>{validInput}</p>
             <InputCommentsBox rawInput={this.props.rawInput}/>
+            <MainTests rawInput={this.props.rawInput}/>
         </div>
       );
     }

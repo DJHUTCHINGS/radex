@@ -11,8 +11,8 @@ import ScoreDisplay from "../score-display/score-display";
 
 class Main extends Component {
     // probably not needed here
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
         //   PROPERTY:'',
         //   PROP2:'DEFAULT'
