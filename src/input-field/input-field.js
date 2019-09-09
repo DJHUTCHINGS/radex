@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import './input-field.css';
 
+import InputCommentsBox from "../input-comments-box/input-comments-box";
+
+
 // import OTHERCOMPONENTS from "../FOLDER/JSFILE";
 
 
@@ -24,7 +27,10 @@ class InputField extends Component {
     render() {
       return (
         <div className="">
-            <h3> input field is loaded</h3>
+            <h3>Input:</h3>
+            <input className="main-input"></input>
+            <InputCommentsBox />
+
         </div>
       );
     }

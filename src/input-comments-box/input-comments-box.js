@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-// import './input-comment-box.css';
+import './input-comments-box.css';
 
+import InputComment from "../input-comment/input-comment";
 // import OTHERCOMPONENTS from "../FOLDER/JSFILE";
+
 
 
 class InputCommentsBox extends Component {
@@ -24,7 +26,8 @@ class InputCommentsBox extends Component {
     render() {
       return (
         <div className="">
-            <h3> input comment box is loaded</h3>
+            <h5 className="test"> input comment box is loaded</h5>
+            <InputComment />
         </div>
       );
     }
