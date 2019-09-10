@@ -13,7 +13,7 @@ class InputField extends Component {
         super(props)
         this.state = {
           rawInput: "",
-          valid: true,
+         
         };
         this.handleInput = this.handleInput.bind(this);
        
@@ -23,9 +23,19 @@ class InputField extends Component {
 handleInput(event) {
   this.setState({
     //note that the replace strips whitespace from the input
-    
     inputObj: {
       rawInput: event.target.value.replace(/\s+/g, ''),
+      rawInputArray: [],
+      validInput: false,
+      arabicLettersOnly: "",
+      arabicLettersOnlyArray: [],
+      taaMarbutah: false,
+      hamzah: false,
+      alephHamzaMaddah
+      strippedInput: "",
+      strippedInputArray: [],
+      score: {},
+
     }
   });
   console.log(this.state.rawInput);
