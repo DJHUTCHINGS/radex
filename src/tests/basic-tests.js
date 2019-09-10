@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 
-
-
 import OutputCharsBox from "../output-chars-box/output-chars-box";
 import OutputCommentsBox from "../output-comments-box/output-comments-box";
 import ScoreDisplay from "../score-display/score-display";
+import MainTests from "./main-tests"
 
-class MainTests extends Component {
+class BasicTests extends Component {
     // probably not needed here
     constructor(props){
         super(props)
@@ -17,11 +16,12 @@ class MainTests extends Component {
 
  
     render() {
-        console.log("At Main Tests now")
-        console.log(this.props.rawInput)
+        console.log("At Basic Tests now")
+        console.log(this.props.inputObj)
       return (
         <div className="">
-            <h5>main test input received is: //need to get from inputObj. This will not be seen in final</h5>
+            <h5>at basic tests and awaiting modification </h5>
+            <MainTests />
             <OutputCharsBox />
             <OutputCommentsBox />
             <ScoreDisplay inputObj={this.props.inputObj}/>
@@ -30,4 +30,4 @@ class MainTests extends Component {
     }
   }
   
-  export default MainTests;
+  export default BasicTests;

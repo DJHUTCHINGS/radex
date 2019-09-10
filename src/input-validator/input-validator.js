@@ -2,11 +2,8 @@ import React, { Component } from "react";
 
 
 import InputCommentsBox from "../input-comments-box/input-comments-box";
-import MainTests from "../tests/main-tests";
+import BasicTests from "../tests/basic-tests";
 
-var rawInputArray = []
-var strippedInputString = ""
-var strippedInputArray = []
 
 class InputValidator extends Component {
     // probably not needed here
@@ -21,7 +18,7 @@ class InputValidator extends Component {
 
 
 //orinal main validation:
-mainValidation(rawInput) {
+mainValidation(input) {
 
 
 
@@ -33,15 +30,15 @@ mainValidation(rawInput) {
 
     render() {
 
-      this.mainValidation(this.props.rawInput)
+      this.mainValidation(this.props.inputObj)
 
 
       return (
         <div className="">
             <p>Is the input valid?</p>
           
-            <InputCommentsBox rawInput={this.props.rawInput}/>
-            <MainTests rawInput={this.props.rawInput}/>
+            <InputCommentsBox inputObj={this.props.inputObj}/>
+            <BasicTests inputObj={this.props.inputObj}/>
         </div>
       );
     }

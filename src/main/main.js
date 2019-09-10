@@ -7,7 +7,7 @@ import OutputChar from "../output-char/output-char";
 import OutputCommentsBox from "../output-comments-box/output-comments-box";
 import OutputComment from "../output-comment/output-comment";
 
-import ScoreDisplay from "../score-display/score-display";
+// import ScoreDisplay from "../score-display/score-display";
 
 class Main extends Component {
     // probably not needed here

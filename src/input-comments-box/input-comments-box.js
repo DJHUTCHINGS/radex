@@ -27,7 +27,7 @@ class InputCommentsBox extends Component {
       return (
         <div className="">
             <h5 className="test"> input comment box is loaded</h5>
-            <p>This input is {this.props.rawInput}</p>
+            <p>This input is //need to get from inputObj</p>
             <InputComment testComment={"this is a test input comment that was generated in the comments box and passed down to a comment"}/>
         </div>
       );

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import './score-display.css';
 
-import MainTests from "../tests/main-tests";
+// import MainTests from "../tests/main-tests";
 
 
 class ScoreDisplay extends Component {
