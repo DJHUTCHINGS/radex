@@ -47,7 +47,11 @@ mainValidation(rawInput) {
   } else {
     console.log("the input does not contain diacritics")
   }
- 
+  if (/ة/.test(rawInput)) {
+    console.log("The input contains a taa marbutah")
+  } else {
+    console.log("the input does not contain a taa marbutah")
+  }
 }
 
 
