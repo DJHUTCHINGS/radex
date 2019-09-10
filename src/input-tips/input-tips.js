@@ -24,7 +24,7 @@ class InputTips extends Component {
     render() {
       return (
         <div className="">
-            <h5 className="input-tip">TIP: (there will be a tip here when valid) </h5>
+            <h5 className="input-tip">TIP: 1 word only; all spaces ignored. </h5>
         </div>
       );
     }

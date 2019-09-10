@@ -16,12 +16,14 @@ class InputField extends Component {
           valid: true,
         };
         this.handleInput = this.handleInput.bind(this);
+       
       }
-
+      
 
 handleInput(event) {
   this.setState({
-    rawInput: event.target.value,
+    //note that the replace strips whitespace from the input
+    rawInput: event.target.value.replace(/\s+/g, ''),
   });
   console.log(this.state.rawInput);
 }

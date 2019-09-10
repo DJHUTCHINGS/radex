@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import './score-display.css';
 
-// import OTHERCOMPONENTS from "../FOLDER/JSFILE";
+import MainTests from "../tests/main-tests";
 
 
 class ScoreDisplay extends Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
         //   PROPERTY:'',
         //   PROP2:'DEFAULT'
@@ -23,9 +23,10 @@ class ScoreDisplay extends Component {
 
     render() {
       return (
-        <div className="score-display test">
+        <div className="score-display">
             <h4>Score Display</h4>
             <p>NOTE: This is for testing purposes only</p>
+            <p>The raw input is: {this.props.rawInput}</p>
         </div>
       );
     }

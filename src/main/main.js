@@ -32,7 +32,7 @@ class Main extends Component {
            <OutputChar />
            <OutputCommentsBox />
            <OutputComment />
-           <ScoreDisplay />
+   
         </div>
       );
     }
