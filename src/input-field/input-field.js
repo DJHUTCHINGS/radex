@@ -23,7 +23,10 @@ class InputField extends Component {
 handleInput(event) {
   this.setState({
     //note that the replace strips whitespace from the input
-    rawInput: event.target.value.replace(/\s+/g, ''),
+    
+    inputObj: {
+      rawInput: event.target.value.replace(/\s+/g, ''),
+    }
   });
   console.log(this.state.rawInput);
 }
@@ -34,7 +37,7 @@ handleInput(event) {
         <div className="">
             <h4 className="input-label">Input:</h4>
             <input name="mainInput" type="text" placeholder="Enter Arabic Text Here" className="main-input" onChange={this.handleInput}/>
-            <InputValidator rawInput={this.state.rawInput}/>
+            <InputValidator inputObj={this.state.inputObj}/>
            
 
         </div>
