@@ -6,7 +6,7 @@ import OutputCharsBox from "../output-chars-box/output-chars-box";
 import OutputChar from "../output-char/output-char";
 import OutputCommentsBox from "../output-comments-box/output-comments-box";
 import OutputComment from "../output-comment/output-comment";
-
+import SampleText from "../sample-text/sample-text";
 // import ScoreDisplay from "../score-display/score-display";
 
 class Main extends Component {
@@ -32,7 +32,7 @@ class Main extends Component {
            <OutputChar />
            <OutputCommentsBox />
            <OutputComment />
-   
+          <SampleText />
         </div>
       );
     }
