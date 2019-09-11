@@ -12,26 +12,52 @@ class InputValidator extends Component {
         this.state = {
 
         }
-         this.mainValidation = this.mainValidation.bind(this);
+        //  this.mainValidation = this.mainValidation.bind(this);
+        //  this.setInitialScore = this.setInitialScore.bind(this);
       }
 
 
 
 //orinal main validation:
-mainValidation(input) {
-
-
-
+// mainValidation(inputObj) {
+//   console.log("The object at validation:")
+//   if (this.props.inputObj !== undefined) {
+//     console.log(this.props.inputObj.rawInput)
+    
+//   }};
   
 
-  }
-  
+  // setInitialScore(inputObj) {
+  //   console.log("The object at initial score:")
+
+  //   if (this.props.inputObj !== undefined) {
+  //     let strippedInput = this.props.inputObj.strippedInput
+  //     console.log(strippedInput)
+  //     this.props.inputObj.strippedInput.strippedInputArray = []
+  //     console.log(this.props.inputObj.strippedInput.strippedInputArray)
+  //   }
+          
+  // }
+
 
 
     render() {
+      console.log("we are at render at validator")
+      // var inputObj = this.props.inputObj
+      // console.log(this.props.inputObj.score)
+      // this.mainValidation(this.props.inputObj)
+      // this.setInitialScore(this.props.inputObj)
+ 
+  
+// if (this.props.inputObj !== undefined) {
+//   console.log(this.props.inputObj.score)
 
-      this.mainValidation(this.props.inputObj)
+// }
+      
+ 
+      
 
+      
 
       return (
         <div className="">

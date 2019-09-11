@@ -18,7 +18,8 @@ class MainTests extends Component {
  
     render() {
         console.log("At Main Tests now")
-        console.log(this.props.rawInput)
+        //the following needs to be updated
+        // console.log(this.props.rawInput)
       return (
         <div className="">
             <h5>main test input received is: //need to get from inputObj. This will not be seen in final</h5>

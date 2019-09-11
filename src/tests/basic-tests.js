@@ -17,7 +17,8 @@ class BasicTests extends Component {
  
     render() {
         console.log("At Basic Tests now")
-        console.log(this.props.inputObj)
+        //the following needs to be update
+        // console.log(this.props.inputObj)
       return (
         <div className="">
             <h5>at basic tests and awaiting modification </h5>
