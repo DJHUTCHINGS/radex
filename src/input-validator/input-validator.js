@@ -10,21 +10,21 @@ class InputValidator extends Component {
     constructor(props){
         super(props)
         this.state = {
-          rawInput: "",
-            rawInputArray: [],
-            rawInputLength: 0,
-            arabicUniBlock: false,
-            arabicWithDiacritics: false,
-            diacritics: false,
-            validInput: false,
-            arabicLettersOnly: "Default - not valid Arabic",
-            arabicLettersOnlyArray: [],
-            taaMarbutah: false,
-            anyHamzah: false,
-            alephHamzahMaddah: false,
-            strippedInput: "Default - not valid arabic",
-            strippedInputArray: [],
-            score: {},
+          // rawInput: "",
+          //   rawInputArray: [],
+          //   rawInputLength: 0,
+          //   arabicUniBlock: false,
+          //   arabicWithDiacritics: false,
+          //   diacritics: false,
+          //   validInput: false,
+          //   arabicLettersOnly: "Default - not valid Arabic",
+          //   arabicLettersOnlyArray: [],
+          //   taaMarbutah: false,
+          //   anyHamzah: false,
+          //   alephHamzahMaddah: false,
+          //   strippedInput: "Default - not valid arabic",
+          //   strippedInputArray: [],
+          //   score: {},
           
         }
          this.mainValidation = this.mainValidation.bind(this);
@@ -38,7 +38,7 @@ mainValidation(rawInput) {
   console.log("The input at main validation:" + rawInput)
   if (rawInput !== undefined) {
     console.log(rawInput)
-
+    var rawInputLength = rawInput.length
     if (rawInput.length > 0) {
       console.log("input has " + rawInput.length + " characters")
 
@@ -76,12 +76,12 @@ console.log(inputNoDiacritics)
 
       //strip tarr marbutah
       var inputNoTaaMarbutah = []
-    
+      var taaMarbutah = false;
       for (let i = 0; i < inputNoDiacritics.length; i++) {
         console.log("now checking for taa marbutah...")
         if (/ة/.test(inputNoDiacritics[i])) {
           console.log("ignoring a taa marbutah")
-          var taaMarbutah = true;
+          taaMarbutah = true;
         } else {
           inputNoTaaMarbutah.push(inputNoDiacritics[i])
         }
@@ -113,6 +113,7 @@ console.log("this input array with normalized hamzahs is:")
 console.log(inputNormalizedHamzah)
       
 var strippedInputArray = inputNormalizedHamzah
+var strippedInput = strippedInputArray.join("")
       console.log("the stripped arabic output is:")
       console.log(strippedInputArray);
       //end of length test
@@ -120,26 +121,51 @@ var strippedInputArray = inputNormalizedHamzah
     //end of main "undefined if"
   }
 
-  // this.setState({
-  //   strippedInputArray: ["test"],
-  // })
+var inputObj = {
+    rawInput: rawInput,
+    rawInputArray: rawInputArray,
+    rawInputLength: rawInputLength,
+    arabicUniBlock: false,
+    arabicWithDiacritics: false,
+    diacritics: false,
+    validInput: false,
+    // arabicOnlyArray: "Default - not valid Arabic",
+    arabicOnlyArray: arabicOnlyArray,
+    taaMarbutah: taaMarbutah,
+    anyHamzah: anyHamzah,
+    alephHamzahMaddah: alephHamzahMaddah,
+    strippedInput: strippedInput,
+    strippedInputArray: strippedInputArray,
+    score: {},
+  }
 
 
-return strippedInputArray
+
+
+
+
+
+return inputObj
 };
 
     render() {
       
       // if (this.props.rawInput !== undefined) {
       //   console.log("input validator / input is " + this.props.rawInput)
-      //   let strippedInputArray = this.mainValidation(this.props.rawInput) 
-      //   console.log("the stripped input is:")
-      //   console.log(strippedInputArray)
+        // let strippedInputArray = this.mainValidation(this.props.rawInput) 
+        // console.log("the stripped input is:")
+        // console.log(strippedInputArray)
         
       // };
-      let strippedInputArray = this.mainValidation(this.props.rawInput)
-      var validatedInput = {strippedInputArray: strippedInputArray}
-      console.log("stripped array at render in validator")
+      let inputObj = this.mainValidation(this.props.rawInput)
+      // let inputObj = {
+      //   rawInput: this.rawInput,
+      //   strippedInputArray: strippedInputArray,
+      //   taaMarbutah: this.taaMarbutah,
+      //   arabicOnlyArray: this.arabicOnlyArray,
+      // }
+      // var validatedInput = {strippedInputArray: strippedInputArray}
+      // console.log("stripped array at render in validator")
       
 
 
@@ -147,7 +173,7 @@ return strippedInputArray
     <div className="">
         <h4>Input comments:</h4>
         
-        <InputCommentsBox validatedInput={validatedInput}/>
+        <InputCommentsBox inputObj={inputObj}/>
         {/* <BasicTests rawInput={this.props.rawInput}/> */}
     </div>
   );
@@ -157,14 +183,6 @@ return strippedInputArray
   }
   
   export default InputValidator;
-
-
-
-
-
-
-
-
 
 
 

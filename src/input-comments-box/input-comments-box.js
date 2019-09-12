@@ -31,15 +31,71 @@ class InputCommentsBox extends Component {
       //   var strippedInputArray = props.strippedInputArray
       //   console.log(strippedInputArray);
       // }
+      const { inputObj } = this.props;
+      console.log("inputObj is:" )
+      console.log(inputObj)
+      const {     
+        rawInput,
+        rawInputArray,
+        rawInputLength,
+        arabicUniBlock,
+        arabicWithDiacritics,
+        diacritics,
+        validInput,
+        arabicOnly,
+        arabicOnlyArray,
+        taaMarbutah,
+        anyHamzah,
+        alephHamzahMaddah,
+        strippedInput,
+        strippedInputArray,
+        score, 
+          } = inputObj;
+
+      
+      if (strippedInputArray !== undefined) {
+        console.log("arabicOnlyArray is")
+        console.log(strippedInputArray)
+        console.log(strippedInputArray[0])
+      }
+
+      if (rawInput !== undefined) {
+        console.log("rawInput is")
+        console.log(rawInput)
+      }
+
+      if (arabicOnlyArray !== undefined) {
+        console.log("arabicOnlyArray is")
+        console.log(arabicOnlyArray)
+      }
+
 
       return (
         <div className="">
             <h5 className="test"> input comment box is loaded</h5>
-            <p>This input is </p>
-            {/* <InputComment testComment={"this is a test input comment that was generated in the comments box and passed down to a comment"}/> */}
+            <p>This original input is {rawInput}</p>
+            <p>This input to be assessed is {strippedInput}</p>
+            {/* <InputComment testComment={'this is the term that will be assessed + ${inputObj.strippedInputArray}'}/> */}
         </div>
       );
     }
   }
   
   export default InputCommentsBox;
+
+
+  // class Listing extends Component {  
+  //   render() {    
+  //     const {      
+  //       listing: {        
+  //         title,        
+  //         type,        
+  //         location: {          
+  //           city,          
+  //           state,          
+  //           country        }      }    } = this.props;
+
+
+
+
+
