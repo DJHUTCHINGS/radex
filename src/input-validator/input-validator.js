@@ -10,61 +10,73 @@ class InputValidator extends Component {
     constructor(props){
         super(props)
         this.state = {
-
+          rawInput: "",
+            rawInputArray: [],
+            rawInputLength: 0,
+            arabicUniBlock: false,
+            arabicWithDiacritics: false,
+            diacritics: false,
+            validInput: false,
+            arabicLettersOnly: "Default - not valid Arabic",
+            arabicLettersOnlyArray: [],
+            taaMarbutah: false,
+            anyHamzah: false,
+            alephHamzahMaddah: false,
+            strippedInput: "Default - not valid arabic",
+            strippedInputArray: [],
+            score: {},
+          
         }
-        //  this.mainValidation = this.mainValidation.bind(this);
+         this.mainValidation = this.mainValidation.bind(this);
         //  this.setInitialScore = this.setInitialScore.bind(this);
       }
 
 
 
-//orinal main validation:
-// mainValidation(inputObj) {
-//   console.log("The object at validation:")
-//   if (this.props.inputObj !== undefined) {
-//     console.log(this.props.inputObj.rawInput)
-    
-//   }};
+
+mainValidation(rawInput) {
+  console.log("The input at main validation:" + rawInput)
+  if (rawInput !== undefined) {
+    console.log(rawInput)
+
+    if (rawInput.length > 0) {
+      console.log("input has " + rawInput.length + " characters")
+
+      var rawInputArray = rawInput.split("")
+      console.log("the raw input array is " + rawInputArray)   
+
+      //test each letter for arabic
+
+
+      //end of length test
+    }
+
+
+
+    //end of main "undefined if"
+  }
+
+
+
+};
   
-
-  // setInitialScore(inputObj) {
-  //   console.log("The object at initial score:")
-
-  //   if (this.props.inputObj !== undefined) {
-  //     let strippedInput = this.props.inputObj.strippedInput
-  //     console.log(strippedInput)
-  //     this.props.inputObj.strippedInput.strippedInputArray = []
-  //     console.log(this.props.inputObj.strippedInput.strippedInputArray)
-  //   }
-          
-  // }
 
 
 
     render() {
-      console.log("we are at render at validator")
-      // var inputObj = this.props.inputObj
-      // console.log(this.props.inputObj.score)
-      // this.mainValidation(this.props.inputObj)
-      // this.setInitialScore(this.props.inputObj)
- 
-  
-// if (this.props.inputObj !== undefined) {
-//   console.log(this.props.inputObj.score)
-
-// }
       
- 
-      
-
-      
+      if (this.props.rawInput !== undefined) {
+        console.log("input validator / input is " + this.props.rawInput)
+        this.mainValidation(this.props.rawInput) 
+        
+      };
 
       return (
         <div className="">
-            <p>Is the input valid?</p>
-          
-            <InputCommentsBox inputObj={this.props.inputObj}/>
-            <BasicTests inputObj={this.props.inputObj}/>
+            <h4>Input comments:</h4>
+           
+            {/* <InputCommentsBox rawInput={this.props.rawInput}/> */}
+            {/* <BasicTests rawInput={this.props.rawInput}/> */}
         </div>
       );
     }
@@ -119,6 +131,11 @@ class InputValidator extends Component {
 //       console.log("the input contains non-Arabic letters")
 //       var arabicWithDiacritics = false;
 //     }
+
+
+
+
+
 //     if (/[\u064B-\u0652]/.test(rawInput)) {
 //       console.log("The input contains Arabic diacritic")
 //       var diacritics = true;
@@ -127,6 +144,9 @@ class InputValidator extends Component {
 //       var diacritics = false;
 //     }
   
+
+
+
 //     //hamzah tests
 //     if (/[\u0621-\u0626]/.test(rawInput)) {
 //       console.log("The input contains some kind of hamzah")
@@ -143,6 +163,11 @@ class InputValidator extends Component {
 //       console.log("the input does not contain an aleph with hamzah or madda")
 //       var alephHamzahMaddah = false;
 //     }
+
+
+
+
+
 //   //taa marbutah test
 //     if (/ة/.test(rawInput)) {
 //       console.log("The input contains a taa marbutah")
@@ -153,48 +178,48 @@ class InputValidator extends Component {
 //     }
   
   
-//     //strip out diacritics
-//   if (arabicWithDiacritics === true && diacritics === true) {
+  //   //strip out diacritics
+  // if (arabicWithDiacritics === true && diacritics === true) {
    
-//     console.log("the input was split into the following array")
-//     console.log(validInputArray)
-//     for (let i = 0; i < validInputArray.length+1; i++) {
-//       console.log(validInputArray[i])
-//       if (/[\u064B-\u0652]/.test(validInputArray[i])) {
-//         validInputArray.splice(i, 1);
-//       }
+  //   console.log("the input was split into the following array")
+  //   console.log(validInputArray)
+  //   for (let i = 0; i < validInputArray.length+1; i++) {
+  //     console.log(validInputArray[i])
+  //     if (/[\u064B-\u0652]/.test(validInputArray[i])) {
+  //       validInputArray.splice(i, 1);
+  //     }
       
-//     }
-//     console.log(validInputArray)
-//   }
+  //   }
+  //   console.log(validInputArray)
+  // }
   
+
+  // //if (arabicWithDiacritics === true && diacritics === false && taaMarbutah === true) - strip taa marbutah and save as strippedInput
   
-//   //if (arabicWithDiacritics === true && diacritics === false && taaMarbutah === true) - strip taa marbutah and save as strippedInput
+  // //Need to make sure all these tests above don't allow non-Arabic characters - - make a test that says that if anything is outside of the range of Arabic characters it is blocked
   
-//   //Need to make sure all these tests above don't allow non-Arabic characters - - make a test that says that if anything is outside of the range of Arabic characters it is blocked
+  // if (arabicUniBlock === false || arabicWithDiacritics === false) {
+  //   var invalidInput = rawInput
+  //   var strippedInput = ""
+  //   var inputNoDiacritics = ""
+  //   if (lengthRawInput > 0) {
+  //     console.log(invalidInput + " is not valid input")
+  //   }  
+  // }
   
-//   if (arabicUniBlock === false || arabicWithDiacritics === false) {
-//     var invalidInput = rawInput
-//     var strippedInput = ""
-//     var inputNoDiacritics = ""
-//     if (lengthRawInput > 0) {
-//       console.log(invalidInput + " is not valid input")
-//     }  
-//   }
-  
-//   //a script to normalize alephs
-//   if (alephHamzahMaddah === true) {
+  // //a script to normalize alephs
+  // if (alephHamzahMaddah === true) {
     
-//     for (let i = 0; i < validInputArray.length+1; i++) {
-//       console.log(validInputArray[i])
-//       if (/[\u0622-\u0623]|[\u0625]/.test(validInputArray[i])) {
-//         validInputArray.splice(i, 1, "ا");
-//       }
-//   }
-//   console.log("input with normalized aleph:")
-//   console.log(validInputArray)
-//   }
+  //   for (let i = 0; i < validInputArray.length+1; i++) {
+  //     console.log(validInputArray[i])
+  //     if (/[\u0622-\u0623]|[\u0625]/.test(validInputArray[i])) {
+  //       validInputArray.splice(i, 1, "ا");
+  //     }
+  // }
+  // console.log("input with normalized aleph:")
+  // console.log(validInputArray)
+  // }
   
   
-//   }
+  // }
   

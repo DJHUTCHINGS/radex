@@ -38,6 +38,7 @@ class InputField extends Component {
       
 
 handleInput(event) {
+  //input is cleared of white space
   var rawInput = event.target.value.replace(/\s+/g, '')
   console.log("raw input at input field is " + rawInput)
 
@@ -45,9 +46,6 @@ handleInput(event) {
   rawInput: rawInput,
   })
 }
-
-
-
 
     render() {
       return (
