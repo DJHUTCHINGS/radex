@@ -44,10 +44,66 @@ mainValidation(rawInput) {
 
       var rawInputArray = rawInput.split("")
       console.log("the raw input array is " + rawInputArray)   
-
+      var arabicOnlyArray = []
       //test each letter for arabic
+      for (let i = 0; i < rawInputArray.length; i++) {
+        let character = rawInputArray[i]
+        
+        console.log(character)
+        //arabic test
+        if (/[\u0600-\u06ff]/.test(character)) {
+        console.log("This input is an Arabic character")
+        // var arabicUniBlock = true;
+        arabicOnlyArray.push(character)
+        }
+      //end of Arabic stripper
+      }
+      //strip diacritics 
+      var inputNoDiacritics = []
+      for (let i = 0; i < arabicOnlyArray.length; i++) {
+        console.log("stripping diacritics...")
+        console.log(arabicOnlyArray[i])
+        if (/[\u064B-\u0652]/.test(arabicOnlyArray[i])) {
+          console.log("ignoring a diacritic")
+        } else {
+          inputNoDiacritics.push(arabicOnlyArray[i])
+        }
+                    
+
+      }
+console.log("input with no diacritics:")
+console.log(inputNoDiacritics)
+
+      //strip tarr marbutah
+      var inputNoTaaMarbutah = []
+    
+      for (let i = 0; i < inputNoDiacritics.length; i++) {
+        console.log("now checking for taa marbutah...")
+        if (/ة/.test(inputNoDiacritics[i])) {
+          console.log("ignoring a taa marbutah")
+          var taaMarbutah = true;
+        } else {
+          inputNoTaaMarbutah.push(inputNoDiacritics[i])
+        }
+      }
+
+console.log("The input array without a taa marbutah is:")
+console.log(inputNoTaaMarbutah)
 
 
+     
+      //normalize hamzah
+      var inputNormalizedHamzah = []
+      for (let i = 0; i < inputNoTaaMarbutah.length; i++) {
+
+
+      }
+
+
+      
+
+      console.log("the arabic output is:")
+      console.log(arabicOnlyArray);
       //end of length test
     }
 
