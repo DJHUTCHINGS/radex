@@ -136,7 +136,7 @@ var inputObj = {
     alephHamzahMaddah: alephHamzahMaddah,
     strippedInput: strippedInput,
     strippedInputArray: strippedInputArray,
-    score: {},
+    score: [],
   }
 
 return inputObj
