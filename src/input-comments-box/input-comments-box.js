@@ -32,8 +32,8 @@ class InputCommentsBox extends Component {
       //   console.log(strippedInputArray);
       // }
       const { inputObj } = this.props;
-      console.log("inputObj is:" )
-      console.log(inputObj)
+      // console.log("inputObj is:" )
+      // console.log(inputObj)
       const {     
         rawInput,
         rawInputArray,
@@ -54,19 +54,19 @@ class InputCommentsBox extends Component {
 
       
       if (strippedInputArray !== undefined) {
-        console.log("arabicOnlyArray is")
-        console.log(strippedInputArray)
-        console.log(strippedInputArray[0])
+        // console.log("arabicOnlyArray is")
+        // console.log(strippedInputArray)
+        // console.log(strippedInputArray[0])
       }
 
       if (rawInput !== undefined) {
-        console.log("rawInput is")
-        console.log(rawInput)
+        // console.log("rawInput is")
+        // console.log(rawInput)
       }
 
       if (arabicOnlyArray !== undefined) {
-        console.log("arabicOnlyArray is")
-        console.log(arabicOnlyArray)
+        // console.log("arabicOnlyArray is")
+        // console.log(arabicOnlyArray)
       }
 
 

@@ -35,24 +35,24 @@ class InputValidator extends Component {
 
 
 mainValidation(rawInput) {
-  console.log("The input at main validation:" + rawInput)
+  // console.log("The input at main validation:" + rawInput)
   if (rawInput !== undefined) {
-    console.log(rawInput)
+    // console.log(rawInput)
     var rawInputLength = rawInput.length
     if (rawInput.length > 0) {
-      console.log("input has " + rawInput.length + " characters")
+      // console.log("input has " + rawInput.length + " characters")
 
       var rawInputArray = rawInput.split("")
-      console.log("the raw input array is " + rawInputArray)   
+      // console.log("the raw input array is " + rawInputArray)   
       var arabicOnlyArray = []
       //test each letter for arabic
       for (let i = 0; i < rawInputArray.length; i++) {
         let character = rawInputArray[i]
         
-        console.log(character)
+        // console.log(character)
         //arabic test
         if (/[\u0600-\u06ff]/.test(character)) {
-        console.log("This input is an Arabic character")
+        // console.log("This input is an Arabic character")
         // var arabicUniBlock = true;
         arabicOnlyArray.push(character)
         }
@@ -61,8 +61,8 @@ mainValidation(rawInput) {
       //strip diacritics 
       var inputNoDiacritics = []
       for (let i = 0; i < arabicOnlyArray.length; i++) {
-        console.log("stripping diacritics...")
-        console.log(arabicOnlyArray[i])
+        // console.log("stripping diacritics...")
+        // console.log(arabicOnlyArray[i])
         if (/[\u064B-\u0652]|[\u0670]/.test(arabicOnlyArray[i])) {
           console.log("ignoring a diacritic")
         } else {
@@ -71,24 +71,24 @@ mainValidation(rawInput) {
                     
 
       }
-console.log("input with no diacritics:")
-console.log(inputNoDiacritics)
+// console.log("input with no diacritics:")
+// console.log(inputNoDiacritics)
 
       //strip tarr marbutah
       var inputNoTaaMarbutah = []
       var taaMarbutah = false;
       for (let i = 0; i < inputNoDiacritics.length; i++) {
-        console.log("now checking for taa marbutah...")
+        // console.log("now checking for taa marbutah...")
         if (/ة/.test(inputNoDiacritics[i])) {
-          console.log("ignoring a taa marbutah")
+          // console.log("ignoring a taa marbutah")
           taaMarbutah = true;
         } else {
           inputNoTaaMarbutah.push(inputNoDiacritics[i])
         }
       }
 
-console.log("The input array without a taa marbutah is:")
-console.log(inputNoTaaMarbutah)
+// console.log("The input array without a taa marbutah is:")
+// console.log(inputNoTaaMarbutah)
 
 
      
@@ -97,9 +97,9 @@ console.log(inputNoTaaMarbutah)
       var anyHamzah = false;
       var alephHamzahMaddah = false;
       for (let i = 0; i < inputNoTaaMarbutah.length; i++) {
-        console.log("now normalizing hamzahs...")
+        // console.log("now normalizing hamzahs...")
         if (/[\u0622-\u0623]|[\u0625]/.test(inputNoTaaMarbutah[i])) {
-          console.log("normalizing a hamzah...")
+          // console.log("normalizing a hamzah...")
           inputNormalizedHamzah.push("ا")
           anyHamzah = true;
           alephHamzahMaddah = true;
@@ -109,13 +109,13 @@ console.log(inputNoTaaMarbutah)
 
       }
 
-console.log("this input array with normalized hamzahs is:")
-console.log(inputNormalizedHamzah)
+// console.log("this input array with normalized hamzahs is:")
+// console.log(inputNormalizedHamzah)
       
 var strippedInputArray = inputNormalizedHamzah
 var strippedInput = strippedInputArray.join("")
-      console.log("the stripped arabic output is:")
-      console.log(strippedInputArray);
+      // console.log("the stripped arabic output is:")
+      // console.log(strippedInputArray);
       //end of length test
     }
     //end of main "undefined if"
@@ -138,12 +138,6 @@ var inputObj = {
     strippedInputArray: strippedInputArray,
     score: {},
   }
-
-
-
-
-
-
 
 return inputObj
 };
@@ -174,7 +168,7 @@ return inputObj
         <h4>Input comments:</h4>
         
         <InputCommentsBox inputObj={inputObj}/>
-        {/* <BasicTests rawInput={this.props.rawInput}/> */}
+        <BasicTests inputObj={inputObj}/>
     </div>
   );
 

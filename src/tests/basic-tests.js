@@ -17,15 +17,14 @@ class BasicTests extends Component {
  
     render() {
         console.log("At Basic Tests now")
-        //the following needs to be update
-        // console.log(this.props.inputObj)
+
       return (
         <div className="">
             <h5>at basic tests and awaiting modification </h5>
             <MainTests />
-            <OutputCharsBox />
+            {/* <OutputCharsBox />
             <OutputCommentsBox />
-            <ScoreDisplay inputObj={this.props.inputObj}/>
+            <ScoreDisplay inputObj={this.props.inputObj}/> */}
         </div>
       );
     }
