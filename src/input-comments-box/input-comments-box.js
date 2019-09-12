@@ -23,12 +23,20 @@ class InputCommentsBox extends Component {
     
 
 
-    render() {
+    render(props) {
+      // console.log({this.props})
+     
+      // if (this.props !== undefined) {
+      //   console.log("the data received from props is:")
+      //   var strippedInputArray = props.strippedInputArray
+      //   console.log(strippedInputArray);
+      // }
+
       return (
         <div className="">
             <h5 className="test"> input comment box is loaded</h5>
-            <p>This input is //need to get from inputObj</p>
-            <InputComment testComment={"this is a test input comment that was generated in the comments box and passed down to a comment"}/>
+            <p>This input is </p>
+            {/* <InputComment testComment={"this is a test input comment that was generated in the comments box and passed down to a comment"}/> */}
         </div>
       );
     }

@@ -63,7 +63,7 @@ mainValidation(rawInput) {
       for (let i = 0; i < arabicOnlyArray.length; i++) {
         console.log("stripping diacritics...")
         console.log(arabicOnlyArray[i])
-        if (/[\u064B-\u0652]/.test(arabicOnlyArray[i])) {
+        if (/[\u064B-\u0652]|[\u0670]/.test(arabicOnlyArray[i])) {
           console.log("ignoring a diacritic")
         } else {
           inputNoDiacritics.push(arabicOnlyArray[i])
@@ -94,47 +94,65 @@ console.log(inputNoTaaMarbutah)
      
       //normalize hamzah
       var inputNormalizedHamzah = []
+      var anyHamzah = false;
+      var alephHamzahMaddah = false;
       for (let i = 0; i < inputNoTaaMarbutah.length; i++) {
-
+        console.log("now normalizing hamzahs...")
+        if (/[\u0622-\u0623]|[\u0625]/.test(inputNoTaaMarbutah[i])) {
+          console.log("normalizing a hamzah...")
+          inputNormalizedHamzah.push("ا")
+          anyHamzah = true;
+          alephHamzahMaddah = true;
+        } else {
+          inputNormalizedHamzah.push(inputNoTaaMarbutah[i])
+        }
 
       }
 
-
+console.log("this input array with normalized hamzahs is:")
+console.log(inputNormalizedHamzah)
       
-
-      console.log("the arabic output is:")
-      console.log(arabicOnlyArray);
+var strippedInputArray = inputNormalizedHamzah
+      console.log("the stripped arabic output is:")
+      console.log(strippedInputArray);
       //end of length test
     }
-
-
-
     //end of main "undefined if"
   }
 
+  // this.setState({
+  //   strippedInputArray: ["test"],
+  // })
 
 
+return strippedInputArray
 };
-  
-
-
 
     render() {
       
-      if (this.props.rawInput !== undefined) {
-        console.log("input validator / input is " + this.props.rawInput)
-        this.mainValidation(this.props.rawInput) 
+      // if (this.props.rawInput !== undefined) {
+      //   console.log("input validator / input is " + this.props.rawInput)
+      //   let strippedInputArray = this.mainValidation(this.props.rawInput) 
+      //   console.log("the stripped input is:")
+      //   console.log(strippedInputArray)
         
-      };
+      // };
+      let strippedInputArray = this.mainValidation(this.props.rawInput)
+      var validatedInput = {strippedInputArray: strippedInputArray}
+      console.log("stripped array at render in validator")
+      
 
-      return (
-        <div className="">
-            <h4>Input comments:</h4>
-           
-            {/* <InputCommentsBox rawInput={this.props.rawInput}/> */}
-            {/* <BasicTests rawInput={this.props.rawInput}/> */}
-        </div>
-      );
+
+  return (
+    <div className="">
+        <h4>Input comments:</h4>
+        
+        <InputCommentsBox validatedInput={validatedInput}/>
+        {/* <BasicTests rawInput={this.props.rawInput}/> */}
+    </div>
+  );
+
+
     }
   }
   
