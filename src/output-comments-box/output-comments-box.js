@@ -11,11 +11,18 @@ class OutputCommentsBox extends Component {
 
         }
 
-      }
+      };
 
- 
+
+
 
     render(props) {
+
+
+       
+  // const { mainTestScore } = this.props.mainTestScore;
+  // const { mainTestOutputComments } = mainTestOutputComments;
+
       return (
         <div className="OutputCommentsBox">
             <h4 className="test">Comments on the results:</h4>

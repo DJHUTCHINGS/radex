@@ -98,7 +98,7 @@ var mainTestResults = this.runMainTests(strippedInput, score);
       const { ALword, mainTestOutputComments, meemWord, testsRan, verbalNoun } = mainTestResults
       var mainTestScore = mainTestResults.score
   
-
+//this may not be necessary
 var finalResultsObject = {
   rawInput: rawInput, 
   strippedInput: strippedInput,
@@ -113,38 +113,12 @@ console.log(finalResultsObject)
 
 
 
-!!!!!FRIDAY MORNING:
-- Get the data passed down to output chars and display out characters!
-- Display output comments!
-- Display input comments!
-- Get the score display working! - - but don't spend to much time on that.
-- Clean up the visual appearance a little 
-- Add at least 20 more tests to main tests!
-- Buy URL
-- Do check for technical requirements - - Readme, etc. 
-- DEPLOY!
-- Clear out useless Code
-- Fill out About section and get those links operating 
-- improve "free samples" section 
-- Don't add more rules or improve the testing section until it is all 90% ready to turn in 
-
-
-
-
-
-
-
-
-
-
-
-
 
       return (
         <div className="">
             {/* <h5>main test input received is: //need to get from inputObj. This will not be seen in final</h5> */}
        
-            <OutputCharsBox finalResultsObject={finalResultsObject}/>
+            <OutputCharsBox mainTestScore={mainTestScore} mainTestOutputComments={mainTestOutputComments}/>
           
             {/* <ScoreDisplay finalResultsObject={finalResultsObject}/> */}
         </div>

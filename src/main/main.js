@@ -28,10 +28,10 @@ class Main extends Component {
            
            <InputField />
 
-           <OutputCharsBox />
-           <OutputChar />
-           <OutputCommentsBox />
-           <OutputComment />
+           {/* <OutputCharsBox /> */}
+           {/* <OutputChar /> */}
+           {/* <OutputCommentsBox /> */}
+           {/* <OutputComment /> */}
           <SampleText />
         </div>
       );

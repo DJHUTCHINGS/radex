@@ -166,7 +166,7 @@ return score;
 
       return (
         <div className="">
-            <h5>at basic tests and awaiting modification </h5>
+            {/* <h5>at basic tests and awaiting modification </h5> */}
             <MainTests newInputObj={newInputObj}/>
             {/* <OutputCharsBox /> */}
             {/* <OutputCommentsBox score={score}/> */}
