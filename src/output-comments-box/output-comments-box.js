@@ -37,15 +37,26 @@ class OutputCommentsBox extends Component {
   }
 
 
+  var OutputDisplay = ""
+  if (commentsDisplay !== "") {
+    OutputDisplay = [
+      <div>
+      <p>Comments:</p>
+      <ul>
+        {commentsDisplay}
+      </ul>
+      </div>
 
-
+    ]
+  } else {
+    OutputDisplay = ""
+  }
+console.log("commentsDisplay is")
+console.log(commentsDisplay)
 
       return (
         <div className="OutputCommentsBox">
-            <p>Comments:</p>
-            <ul>
-              {commentsDisplay}
-            </ul>
+          {OutputDisplay}
         </div>
       );
     }

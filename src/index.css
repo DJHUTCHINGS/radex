@@ -1,7 +1,9 @@
 .test {
   display: none;
 }
-
+.score-display {
+  display: none;
+}
 
 body {
   margin: 0;

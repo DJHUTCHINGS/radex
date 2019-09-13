@@ -58,20 +58,27 @@ class OutputCharsBox extends Component {
         }
       // console.log(divStyle)
        scoreDisplay.push(
-      
-         <span style={divStyle}>{char} </span>
-  
+          
+          <span style={divStyle}>{char} </span>
+     
+         
        )
  
       } 
- 
- 
+      var outputDisplay = []
+      if (mainTestScore.length > 0) {
+        outputDisplay = [
+          <div>
+          <p>Output:</p>
+          </div>
+        ] 
+      }
    
 
       return (
         <div className="">
            
-            <p>Output:</p>
+            {outputDisplay}
             {scoreDisplay}
             <OutputCommentsBox mainTestOutputComments={mainTestOutputComments}/>
             <ScoreDisplay mainTestScore={mainTestScore} mainTestOutputComments={mainTestOutputComments}/>

@@ -21,7 +21,7 @@ class NavBar extends Component {
     render() {
       return (
         <div className="nav-button">
-            <h4>About</h4>
+            <h4 className="test">About</h4>
         </div>
       );
     }

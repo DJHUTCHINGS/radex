@@ -54,6 +54,7 @@ class InputCommentsBox extends Component {
   
   console.log("testng the inputs comment box")
   console.log(strippedInput)
+  console.log(taaMarbutah)
   //DISPLAY
   var rawInputDisplay = []
   if (rawInput !== "") {
@@ -77,12 +78,34 @@ class InputCommentsBox extends Component {
     ]
   }
 
+  var inputComments = []
+  if (strippedInput !== undefined && strippedInput !== "") {
+    if (taaMarbutah === true) {
+      inputComments.push("The input contains a Taa Marbutah, which is never part of the root so it has been removed.")
+    }
+    if (alephHamzahMaddah === true) {
+      inputComments.push("The input contains an aliph that had a hamzah or a maddah on it. Because written Arabic is inconsistent on the rendering of these marks, they have been removed from this analysis. In general a hamzah at the start of the a word is not part of the root, but if it is in the middle of the word, it might be.")
+    }
+  }
+
+  var inputCommentsDiplay = []
+  if (inputComments !== undefined) {
+    for (let i = 0; i < inputComments.length; i++) {
+      inputCommentsDiplay.push(
+        <li>{inputComments[i]}</li>
+      )
+    }
+  }
 
 
       return (
         <div className="">
             {rawInputDisplay}
             {assessedInputDisplay}
+            <ul>
+              {inputCommentsDiplay}
+            </ul>
+            
             {/* <InputComment testComment={'this is the term that will be assessed + ${inputObj.strippedInputArray}'}/> */}
         </div>
       );
