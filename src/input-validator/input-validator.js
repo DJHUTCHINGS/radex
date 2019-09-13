@@ -165,7 +165,7 @@ return inputObj
 
   return (
     <div className="">
-        <h4>Input comments:</h4>
+        {/* <h4>Input comments:</h4> */}
         
         <InputCommentsBox inputObj={inputObj}/>
         <BasicTests inputObj={inputObj}/>

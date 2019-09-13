@@ -51,21 +51,38 @@ class InputCommentsBox extends Component {
         strippedInputArray,
         score, 
           } = inputObj;
-
+  
+  console.log("testng the inputs comment box")
+  console.log(strippedInput)
+  //DISPLAY
   var rawInputDisplay = []
-  if (rawInput !== undefined && rawInputDisplay !== null) {
-  rawInputDisplay.push(
-    <p>This original input is {rawInput}</p>
-  )
-}
-      
+  if (rawInput !== "") {
+    rawInputDisplay = [
+      <div>
+  <h4>Notes about the input:</h4>
+  <p>This original input is: {rawInput}.</p>
+      </div>
+
+    ]
+  } 
+  
+  var assessedInputDisplay = []
+  if (strippedInput !== undefined && strippedInput !== "") {
+    assessedInputDisplay = [
+      <p>This input to be assessed is: {strippedInput}.</p>
+    ]
+  } else if (strippedInput === "") {
+    assessedInputDisplay = [
+      <p>This input appears to not be valid Arabic characters.</p>
+    ]
+  }
 
 
 
       return (
         <div className="">
             {rawInputDisplay}
-            <p>This input to be assessed is {strippedInput}</p>
+            {assessedInputDisplay}
             {/* <InputComment testComment={'this is the term that will be assessed + ${inputObj.strippedInputArray}'}/> */}
         </div>
       );
