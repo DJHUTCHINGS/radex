@@ -53,18 +53,18 @@ class ScoreDisplay extends Component {
 
      } 
 
-
+     var commentsDisplay = []
+     for (let i = 0; i < mainTestOutputComments.length; i++) {
+      let comment = mainTestOutputComments[i]
+      commentsDisplay.push(
+        <li key={i}>
+        <p>{comment}</p>
+      </li> 
+      )
+     }
  
 
    
-
-
-
-
-
-
-      // const { rawInput, strippedInput, ALword, mainTestOutputComments, meemWord, testsRan, verbalNoun, score } = this.props.finalResultsObject
-
       return (
         <div className="score-display">
             <h4>Score Display</h4>
@@ -73,10 +73,11 @@ class ScoreDisplay extends Component {
             <ul className="score-display-score-box">
 
         {scoreDisplay}
+        
 
             </ul>
             <ul className="score-display-comments-box">
-
+        {commentsDisplay}
             </ul>
 
         </div>

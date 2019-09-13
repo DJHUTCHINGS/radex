@@ -14,12 +14,6 @@ class OutputCharsBox extends Component {
         }
       }
 
-    // METHODNAME = event => {
-    // event.preventDefault()
-
-    // .then( response => console.log(response))
-    // }
-    
 
 
     render(props) {
@@ -66,16 +60,7 @@ class OutputCharsBox extends Component {
       } 
  
  
-  
-
-
-      // console.log(mainTestScore)
-      // const { rawInput, strippedInput, ALword, mainTestOutputComments, meemWord, testsRan, verbalNoun, score } = finalResultsObject
-     
-      // if (this.props.finalResultsObject.score !== undefined) {
-      //   const score = finalResultsObject.score
-      // }
-
+   
 
       return (
         <div className="">
