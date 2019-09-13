@@ -5,8 +5,8 @@ import './output-comments-box.css';
 
 
 class OutputCommentsBox extends Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
 
         }
@@ -15,10 +15,10 @@ class OutputCommentsBox extends Component {
 
  
 
-    render() {
+    render(props) {
       return (
-        <div className="">
-            <h4 className="test">the outbut comments box is loaded</h4>
+        <div className="OutputCommentsBox">
+            <h4 className="test">Comments on the results:</h4>
         </div>
       );
     }

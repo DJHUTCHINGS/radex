@@ -23,14 +23,14 @@ basicTest(strippedInputArray) {
     console.log("now we run first tests")
     for (let i = 0; i < strippedInputArray.length; i++) {
       console.log("now testing the index " + i + ", which is " + strippedInputArray[i])
-      if (score[i][0] === "ص") {score[i][1] = score[i][1] * 2}
-      if (score[i][0] === "ق") {score[i][1] = score[i][1] * 2}
-      if (score[i][0] === "ا") {score[i][1] = score[i][1] / 2}
-      if (score[i][0] === "ج") {score[i][1] = score[i][1] * 2}
-      if (score[i][0] === "ض") {score[i][1] = score[i][1] * 2}
-      if (score[i][0] === "م") {score[i][1] = score[i][1] / 2}
-      if (score[i][0] === "ع") {score[i][1] = score[i][1] * 2}
-      if (score[i][0] === "ح") {score[i][1] = score[i][1] * 2}
+      if (score[i][0] === "ص") {score[i][1] = score[i][1] * 2; score[i][2] = ["ص comment"]}
+      if (score[i][0] === "ق") {score[i][1] = score[i][1] * 2; score[i][2] = ["ق comment"]}
+      if (score[i][0] === "ا") {score[i][1] = score[i][1] / 2; score[i][2] = ["ا comment"]}
+      if (score[i][0] === "ج") {score[i][1] = score[i][1] * 2; score[i][2] = ["ج comment"]}
+      if (score[i][0] === "ض") {score[i][1] = score[i][1] * 2; score[i][2] = ["ض comment"]}
+      if (score[i][0] === "م") {score[i][1] = score[i][1] / 2; score[i][2] = ["م comment"]}
+      if (score[i][0] === "ع") {score[i][1] = score[i][1] * 2; score[i][2] = ["ع comment"]}
+      if (score[i][0] === "ح") {score[i][1] = score[i][1] * 2; score[i][2] = ["ح comment"]}
 
     }
 
@@ -46,7 +46,7 @@ return score
   //end of basic text
 }
 
- 
+
 
 initialScore(strippedInputArray) {
 console.log("creating intitial score out of the following array")
@@ -111,7 +111,8 @@ return score;
             } = inputObj;
   
         var basicTestScore = this.basicTest(strippedInputArray)
-        
+        console.log("the results are of the basic test are:")
+        console.log(basicTestScore)
 
         if (strippedInputArray !== undefined) {
           // console.log("arabicOnlyArray is")
@@ -128,7 +129,15 @@ return score;
           // console.log("arabicOnlyArray is")
           // console.log(arabicOnlyArray)
         }
-  
+        
+        var newInputObj = {
+          rawInput: rawInput,
+          strippedInputArray: strippedInputArray,
+          score: basicTestScore,
+        }
+
+        console.log("the new input object is as follows:")
+        console.log(newInputObj)
 
 
 
@@ -137,9 +146,9 @@ return score;
       return (
         <div className="">
             <h5>at basic tests and awaiting modification </h5>
-            {/* <MainTests /> */}
+            <MainTests newInputObj={newInputObj}/>
             {/* <OutputCharsBox /> */}
-            <OutputCommentsBox />
+            {/* <OutputCommentsBox score={score}/> */}
             {/* <ScoreDisplay inputObj={this.props.inputObj}/> */}
         </div>
       );

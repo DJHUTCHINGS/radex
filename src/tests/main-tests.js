@@ -16,16 +16,20 @@ class MainTests extends Component {
       }
 
  
-    render() {
+    render(props) {
         console.log("At Main Tests now")
         //the following needs to be updated
         // console.log(this.props.rawInput)
+        const { newInputObj } = this.props;
+        const {score, rawInput} = newInputObj
+        console.log(score)
+
       return (
         <div className="">
             <h5>main test input received is: //need to get from inputObj. This will not be seen in final</h5>
             <OutputCharsBox />
-            <OutputCommentsBox />
-            <ScoreDisplay inputObj={this.props.inputObj}/>
+            {/* <OutputCommentsBox /> */}
+            {/* <ScoreDisplay inputObj={this.props.inputObj}/> */}
         </div>
       );
     }
