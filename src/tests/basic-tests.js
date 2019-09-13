@@ -102,7 +102,7 @@ if (strippedInputArray !== undefined) {
 // console.log(score)
 return score;
 }
-``
+
 
 
 

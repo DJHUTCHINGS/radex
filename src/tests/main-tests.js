@@ -5,6 +5,9 @@ import React, { Component } from "react";
 import OutputCharsBox from "../output-chars-box/output-chars-box";
 import OutputCommentsBox from "../output-comments-box/output-comments-box";
 import ScoreDisplay from "../score-display/score-display";
+import { tsLiteralType } from "@babel/types";
+import { ReadStream } from "tty";
+import { CodeGenerator } from "@babel/generator";
 
 class MainTests extends Component {
     // probably not needed here
@@ -17,7 +20,7 @@ class MainTests extends Component {
       }
 
       runMainTests(strippedInput, score) {
-      console.log("now starting main tests...")
+      // console.log("now starting main tests...")
       let mainTestResults = {
         score: score,
         meemWord: false,
@@ -46,7 +49,7 @@ class MainTests extends Component {
           }
         }
       }
-      console.log(pos1, pos1scr, pos2, pos2scr, pos3, pos3scr, pos4, pos4scr)
+      // console.log(pos1, pos1scr, pos2, pos2scr, pos3, pos3scr, pos4, pos4scr)
       const diff = 100/inputLength;
       
       mainTestResults.testsRan.push("initial م");
@@ -80,27 +83,72 @@ class MainTests extends Component {
 
 
     render(props) {
-        console.log("At Main Tests now")
+        // console.log("At Main Tests now")
         //the following needs to be updated
         // console.log(this.props.rawInput)
         const { newInputObj } = this.props;
-        const {score, rawInput, strippedInput} = newInputObj
+        const {score, rawInput, strippedInput} = newInputObj;
         console.log(score)
 
 var mainTestResults = this.runMainTests(strippedInput, score);
-console.log("the main test results handed back are:")
-console.log(mainTestResults)
+// console.log("the main test results handed back are:")
+// console.log(mainTestResults)
+
+
+      const { ALword, mainTestOutputComments, meemWord, testsRan, verbalNoun } = mainTestResults
+      var mainTestScore = mainTestResults.score
+  
+
+var finalResultsObject = {
+  rawInput: rawInput, 
+  strippedInput: strippedInput,
+  ALword: ALword,
+  mainTestOutputComments: mainTestOutputComments, 
+  meemWord: meemWord,
+  testsRan: testsRan, 
+  verbalNoun: verbalNoun,
+  score: mainTestScore,
+}
+console.log(finalResultsObject)
+
+
+
+!!!!!FRIDAY MORNING:
+- Get the data passed down to output chars and display out characters!
+- Display output comments!
+- Display input comments!
+- Get the score display working! - - but don't spend to much time on that.
+- Clean up the visual appearance a little 
+- Add at least 20 more tests to main tests!
+- Buy URL
+- Do check for technical requirements - - Readme, etc. 
+- DEPLOY!
+- Clear out useless Code
+- Fill out About section and get those links operating 
+- improve "free samples" section 
+- Don't add more rules or improve the testing section until it is all 90% ready to turn in 
+
+
+
+
+
+
+
+
+
+
 
 
 
       return (
         <div className="">
-            <h5>main test input received is: //need to get from inputObj. This will not be seen in final</h5>
-            <OutputCharsBox />
-            {/* <OutputCommentsBox /> */}
-            {/* <ScoreDisplay inputObj={this.props.inputObj}/> */}
+            {/* <h5>main test input received is: //need to get from inputObj. This will not be seen in final</h5> */}
+       
+            <OutputCharsBox finalResultsObject={finalResultsObject}/>
+          
+            {/* <ScoreDisplay finalResultsObject={finalResultsObject}/> */}
         </div>
-      );
+    );
     }
   }
   

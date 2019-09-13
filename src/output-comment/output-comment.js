@@ -5,8 +5,8 @@ import './output-comment.css';
 
 
 class OutputComment extends Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
         //   PROPERTY:'',
         //   PROP2:'DEFAULT'
@@ -21,7 +21,11 @@ class OutputComment extends Component {
     
 
 
-    render() {
+    render(props) {
+
+      // const { rawInput, strippedInput, ALword, mainTestOutputComments, meemWord, testsRan, verbalNoun, score } = this.props.finalResultsObject
+
+
       return (
         <div className="">
             <h5 className="test">one output comment is loaded</h5>

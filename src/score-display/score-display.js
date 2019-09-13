@@ -21,7 +21,10 @@ class ScoreDisplay extends Component {
     
 
 
-    render() {
+    render(props) {
+
+      const { rawInput, strippedInput, ALword, mainTestOutputComments, meemWord, testsRan, verbalNoun, score } = this.props.finalResultsObject
+
       return (
         <div className="score-display">
             <h4>Score Display</h4>

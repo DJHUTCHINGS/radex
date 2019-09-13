@@ -5,8 +5,8 @@ import React, { Component } from "react";
 
 
 class OutputCharsBox extends Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
         //   PROPERTY:'',
         //   PROP2:'DEFAULT'
@@ -21,7 +21,18 @@ class OutputCharsBox extends Component {
     
 
 
-    render() {
+    render(props) {
+
+      const { finalResultsObject } = this.props
+
+      console.log(finalResultsObject)
+      // const { rawInput, strippedInput, ALword, mainTestOutputComments, meemWord, testsRan, verbalNoun, score } = finalResultsObject
+     
+      // if (this.props.finalResultsObject.score !== undefined) {
+      //   const score = finalResultsObject.score
+      // }
+
+
       return (
         <div className="">
             <h5 className="test">output chars box is loaded</h5>
