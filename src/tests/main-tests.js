@@ -98,6 +98,8 @@ var mainTestResults = this.runMainTests(strippedInput, score);
       const { ALword, mainTestOutputComments, meemWord, testsRan, verbalNoun } = mainTestResults
       var mainTestScore = mainTestResults.score
   
+
+console.log(mainTestScore)
 //this may not be necessary
 var finalResultsObject = {
   rawInput: rawInput, 

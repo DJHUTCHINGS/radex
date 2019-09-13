@@ -52,28 +52,19 @@ class InputCommentsBox extends Component {
         score, 
           } = inputObj;
 
+  var rawInputDisplay = []
+  if (rawInput !== undefined && rawInputDisplay !== null) {
+  rawInputDisplay.push(
+    <p>This original input is {rawInput}</p>
+  )
+}
       
-      if (strippedInputArray !== undefined) {
-        // console.log("arabicOnlyArray is")
-        // console.log(strippedInputArray)
-        // console.log(strippedInputArray[0])
-      }
 
-      if (rawInput !== undefined) {
-        // console.log("rawInput is")
-        // console.log(rawInput)
-      }
-
-      if (arabicOnlyArray !== undefined) {
-        // console.log("arabicOnlyArray is")
-        // console.log(arabicOnlyArray)
-      }
 
 
       return (
         <div className="">
-            <h5 className="test"> input comment box is loaded</h5>
-            <p>This original input is {rawInput}</p>
+            {rawInputDisplay}
             <p>This input to be assessed is {strippedInput}</p>
             {/* <InputComment testComment={'this is the term that will be assessed + ${inputObj.strippedInputArray}'}/> */}
         </div>

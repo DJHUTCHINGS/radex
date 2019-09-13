@@ -26,10 +26,16 @@ class OutputCharsBox extends Component {
       // console.log(this.props)
       // const { } = this.props;
       const { mainTestScore, mainTestOutputComments } = this.props;
+      console.log("start output chars box")
       console.log(mainTestScore)
       console.log(mainTestOutputComments)
+      //push cahracter  comments to main comments
+      for (let i = 0; i < mainTestScore.length; i++) {
+        let thisComment = mainTestScore[i][2]
+        mainTestOutputComments.push(thisComment)
+      }
+      console.log(mainTestOutputComments)
 
-     
 
       var scoreDisplay = []
       var fontSizeBase = 0;

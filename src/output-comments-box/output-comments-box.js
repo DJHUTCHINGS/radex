@@ -23,9 +23,29 @@ class OutputCommentsBox extends Component {
   // const { mainTestScore } = this.props.mainTestScore;
   // const { mainTestOutputComments } = mainTestOutputComments;
 
+  const { mainTestOutputComments } = this.props;
+
+
+  var commentsDisplay = []
+  for (let i = 0; i < mainTestOutputComments.length; i++) {
+   let comment = mainTestOutputComments[i]
+   commentsDisplay.push(
+     <li key={i}>
+     <p>{comment}</p>
+   </li> 
+   )
+  }
+
+
+
+
+
       return (
         <div className="OutputCommentsBox">
-            <h4 className="test">Comments on the results:</h4>
+            <p>Comments:</p>
+            <ul>
+              {commentsDisplay}
+            </ul>
         </div>
       );
     }
