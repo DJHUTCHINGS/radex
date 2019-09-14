@@ -25,8 +25,10 @@ class OutputCommentsBox extends Component {
 
   const { mainTestOutputComments } = this.props;
 
-
+  console.log("commentsDisplay is ")
+  
   var commentsDisplay = []
+  console.log(commentsDisplay)
   for (let i = 0; i < mainTestOutputComments.length; i++) {
    let comment = mainTestOutputComments[i]
    commentsDisplay.push(
@@ -36,26 +38,46 @@ class OutputCommentsBox extends Component {
    )
   }
 
-
+  console.log(commentsDisplay)
   var OutputDisplay = ""
-  if (commentsDisplay !== "") {
+  if (commentsDisplay.length > 0) {
+ 
     OutputDisplay = [
       <div>
-      <p>Comments:</p>
+       <p>Comments:</p>
       <ul>
+     
         {commentsDisplay}
       </ul>
       </div>
 
     ]
-  } else {
+  } else if (commentsDisplay === []) {
     OutputDisplay = ""
   }
 console.log("commentsDisplay is")
 console.log(commentsDisplay)
 
+
+
+
+// var assessedInputDisplay = []
+// if (strippedInput !== undefined && strippedInput !== "") {
+//   assessedInputDisplay = [
+//     <p>This input to be assessed is: {strippedInput}.</p>
+//   ]
+// } else if (strippedInput === "") {
+//   assessedInputDisplay = [
+//     <p>This input appears to not be valid Arabic characters.</p>
+//   ]
+// }
+
+
+
+
       return (
         <div className="OutputCommentsBox">
+        
           {OutputDisplay}
         </div>
       );
@@ -63,3 +85,6 @@ console.log(commentsDisplay)
   }
   
   export default OutputCommentsBox;
+
+
+
