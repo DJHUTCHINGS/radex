@@ -178,6 +178,113 @@ if (
 
 
 
+console.log("start tests conversion on this test array:")
+function testFromInitials(score) {
+  var testsArray = [
+      ["M123", "M123 comment"],
+      ["122", "122 comment"],
+      ["MST123", "MST123 comment"],
+      ["T1T23", "T1T23 comment"]
+      ]
+  console.log(testsArray)
+  var conversionKey = [
+      ["X", "X"],
+      ["M", "م"],
+      ["A", "ا"],
+      ["S", "س"],
+      ["T", "ت"],
+      ["W", "و"],
+      ["H", "ه"],
+      ["?", "ه"],
+      ["I", "ي"],
+      ["L", "ل"],
+      ["B", "ب"],
+      ["F", "ف"],
+      ["N", "ن"],
+      ["Y", "Y"],
+      ["Z", "Z"],
+      ["K", "ك"],
+      ["1", "a"], 
+      ["2", "b"],
+      ["3", "c"],
+      ["4", "d"],
+
+  ]
+
+  //this is going to be the new array of tests
+  var convertedTestsArray = []
+  //this cycles though every model
+  for (let i = 0; i < testsArray.length; i++) {
+      //this selects on of the test models
+      let thisTest = testsArray[i][0]
+      console.log("converting this test:")
+      console.log(thisTest)
+      //this splits the model into an array
+      let thisTestArray = thisTest.split("")
+      // console.log("this test array is:")
+      // console.log(thisTestArray)
+      //this cycles through every letter in the model
+      var newTestWordArray = []
+      for (let j = 0; j < thisTestArray.length; j++) {
+        //this assigns the letter to a variable
+        let thisCharacter = thisTestArray[j][0]
+        // console.log("the letter being looked at is:")
+        // console.log(thisCharacter)
+        for (let k = 0; k < conversionKey.length; k++) {
+          if (thisCharacter === conversionKey[k][0]) {
+            // console.log(thisCharacter + " matches " + conversionKey[k][1])
+            var switchLetter = conversionKey[k][1]
+            // console.log("the new letter is:")
+            // console.log(switchLetter)
+            newTestWordArray.push(switchLetter)
+          }
+          // console.log("the new test word array is now:")
+          // console.log(newTestWordArray)
+        }
+        // var rejoinedTest = newTestWordArray.join("")
+        // console.log("the rejoined test is:")
+        // console.log(rejoinedTest)
+
+      }
+      // testsArray[i][0] = rejoinedTest[i]
+      convertedTestsArray.push(newTestWordArray)
+      // console.log("the convertedTestsArray is:")
+      // console.log(convertedTestsArray)
+      testsArray[i][0] = convertedTestsArray[i]
+  }
+  console.log("the tests array is now:")
+  console.log(testsArray)
+//End of model conversion 
+
+
+console.log("score is:")
+console.log(score)
+var numberOfTests = testsArray.length
+console.log("the number of tests to run is " + numberOfTests)
+
+
+
+for (let i = 0; i < numberOfTests; i++) {
+ let thisTest = testsArray[i][0]
+ console.log("the test runnin now is:")
+console.log(thisTest)
+ let thisTestComment = testsArray[i][1]
+ console.log(thisTestComment)
+ let thisTestLength = thisTest.length
+ console.log("the length of this test is " + thisTestLength)
+
+
+
+
+}
+
+
+
+
+//end function    
+}
+
+testFromInitials(score)
 
 
 

@@ -3,7 +3,7 @@
 
 //TEXPERIMENTS !!!
 
-// //TESTNOTE: 
+//TESTNOTE: 
 // mainTestResults.testsRan.push(
 //     "M123"
 //     ); 
@@ -77,8 +77,50 @@
 
 
 
+//TESTNOTE: 
+
+// mainTestResults.testsRan.push(
+//     "UNIDENTIFIEDTEST"
+//     ); 
+//     if (
+//         // TODO: CONFIRM LENGTH
+//         inputLength > 3
+//         && 
+//         pos1 === "XXXX"
+//         &&
+//         pos2 === "XXXX"
+//         &&
+//         pos2 === "XXXX"
+//         &&
+//         pos3 === "XXXX"
+//         &&
+//         pos4 === "XXXX"
+//         &&
+//         pos5 === "XXXX"
+//         &&
+//         pos6 === "XXXX"
+//         &&
+//         pos7 === "XXXX"
+//         &&
+//         pos8 === "XXXX"
+        
 
 
+
+
+
+
+//         ) {
+//         mainTestResults.score[0][1] = pos1scr / diff;
+//         mainTestResults.mainTestOutputComments.push(
+//             "If there is an initial meem, it is probably not part of the root."
+//             );
+// }
+
+
+
+
+// let score = [["م", 50]["ك", 50]["ت", 50]["ب", 50]];
 
 
 
@@ -106,8 +148,9 @@
 
 
 
-
-
+//COPY TESTS BELOW COPY TESTS BELOW COPY TESTS BELOW COPY TESTS BELOW COPY TESTS BELOW 
+//COPY TESTS BELOW COPY TESTS BELOW COPY TESTS BELOW COPY TESTS BELOW COPY TESTS BELOW 
+//COPY TESTS BELOW COPY TESTS BELOW COPY TESTS BELOW COPY TESTS BELOW COPY TESTS BELOW 
 
 //TESTBLOC NOTE: Basic Meem Tests	
 //	testsRan.push("	M123	"); 
@@ -145,8 +188,6 @@
 
 
 
-
-
 //TESTBLOC NOTE: Misc Basic Tests
 
 //	testsRan.push("	1A23	"); 
@@ -167,7 +208,7 @@
 
 //	testsRan.push("	123	"); 
 
-//	testsRan.push("	122	"); 
+//	testsRan.push("	122	");
 
 //	testsRan.push("	1234	"); 
 
@@ -177,7 +218,7 @@
 
 //	testsRan.push("	TM123	"); 
 
-// Individual letter tests	
+// TESTBLOC NOTE: Individual letter tests	
 
 //	testsRan.push("	anyLetterA	"); 
 
@@ -253,7 +294,7 @@
 
 //	testsRan.push("	<reserved for more individual letter tests>	"); 
 
-//		other unconjugated verbs and verbal nouns	
+//	TESTBLOC NOTE: 	other unconjugated verbs and verbal nouns	
 
 //	testsRan.push("	<reserved for future use>	"); 
 
@@ -309,7 +350,7 @@
 
 //	testsRan.push("	AST12A2	"); 
 
-//		verb forms 11-13	
+//	TESTBLOC NOTE: 	verb forms 11-13	
 
 //	testsRan.push("	A12A3form11	"); 
 
@@ -321,7 +362,7 @@
 
 //	testsRan.push("	A12W3form13	"); 
 
-//	testsRan.push("	<reserved for more uncongugated verbs and verbal nouns>	"); 
+//TESTBLOC NOTE: 
 
 //	testsRan.push("	<reserved for more uncongugated verbs and verbal nouns>	"); 
 
@@ -339,7 +380,9 @@
 
 //	testsRan.push("	<reserved for more uncongugated verbs and verbal nouns>	"); 
 
-// AL- TESTS	
+//	testsRan.push("	<reserved for more uncongugated verbs and verbal nouns>	"); 
+
+//TESTBLOC NOTE:  AL- TESTS	
 
 //	testsRan.push("	AL1	"); 
 
@@ -403,7 +446,7 @@
 
 //	testsRan.push("	ALA12I2A3form12VN	"); 
 
-// LL tests	
+// TESTBLOC NOTE:  LL tests	
 
 //	testsRan.push("	LL1	"); 
 
@@ -529,7 +572,7 @@
 
 //	testsRan.push("	BALA12I2A3form12VN	"); 
 
-// F-AL- tests	
+//TESTBLOC NOTE:  F-AL- tests	
 
 //	testsRan.push("	FAL1	"); 
 
@@ -618,6 +661,7 @@
 //	testsRan.push("	ALMST123	"); 
 
 //	testsRan.push("	ALM12A3	"); 
+
 //	testsRan.push("	ALM12W3	"); 
 
 //	testsRan.push("	ALM1A2I3	"); 
@@ -677,230 +721,451 @@
 //	testsRan.push("	WALA123A3	"); 
 
 //	testsRan.push("	WALAST12A3	"); 
+
+
 //	testsRan.push("	WALAST12A2	"); 
+
 //	testsRan.push("	WALA12I3A3form11VN	"); 
+
 //	testsRan.push("	WALA12I2A3form12VN	"); 
+
 //	testsRan.push("	WALM123	"); 
+
 //	testsRan.push("	WALM12	"); 
+
 //	testsRan.push("	WALM122	"); 
+
 //	testsRan.push("	WALM1A23	"); 
+
 //	testsRan.push("	WALM1A2	"); 
+
 //	testsRan.push("	WALMT123	"); 
+
 //	testsRan.push("	WALMT122	"); 
+
 //	testsRan.push("	WALMT1A23	"); 
+
 //	testsRan.push("	WALMN123	"); 
+
 //	testsRan.push("	WALM1T23	"); 
+
 //	testsRan.push("	WALM1T2	"); 
+
 //	testsRan.push("	WALMST123	"); 
+
 //	testsRan.push("	WALM12A3	"); 
+
 //	testsRan.push("	WALM12W3	"); 
 //	testsRan.push("	WALM1A2I3	"); 
+
 //	testsRan.push("	W123	"); 
+
 //	testsRan.push("	W12	"); 
+
 //	testsRan.push("	WLL	"); 
+
 //	testsRan.push("	WBAL	"); 
+
 //	testsRan.push("	WBxyz	"); 
+
 //	testsRan.push("	WLLMxyz	"); 
+
 //	testsRan.push("	WBALxyz	"); 
+
 //	testsRan.push("	WBMxyz	"); 
+
 //	testsRan.push("	WIxyz	"); 
+
 //	testsRan.push("	WTxyz	"); 
+
 //	testsRan.push("	WNxyz	"); 
+
 //	testsRan.push("	<reserved for future>	"); 
+
 //	testsRan.push("	<reserved for future>	"); 
+
 //	testsRan.push("	<reserved for future>	"); 
+
 //	testsRan.push("	LLM123	"); 
+
 //	testsRan.push("	LLM12	"); 
+
 //	testsRan.push("	LLM122	"); 
+
 //	testsRan.push("	LLM1A23	"); 
+
 //	testsRan.push("	LLM1A2	"); 
+
 //	testsRan.push("	LLMT123	"); 
+
 //	testsRan.push("	LLMT122	"); 
+
 //	testsRan.push("	LLMT1A23	"); 
+
 //	testsRan.push("	LLMN123	"); 
+
 //	testsRan.push("	LLM1T23	"); 
+
 //	testsRan.push("	LLM1T2	"); 
+
 //	testsRan.push("	LLMST123	"); 
+
 //	testsRan.push("	LLM12A3	"); 
+
 //	testsRan.push("	LLM12W3	"); 
+
 //	testsRan.push("	LLM1A2I3	"); 
+
 //	testsRan.push("	BALM123	"); 
+
 //	testsRan.push("	BALM12	"); 
+
 //	testsRan.push("	BALM122	"); 
+
 //	testsRan.push("	BALM1A23	"); 
+
 //	testsRan.push("	BALM1A2	"); 
+
 //	testsRan.push("	BALMT123	"); 
+
 //	testsRan.push("	BALMT122	"); 
+
 //	testsRan.push("	BALMT1A23	"); 
+
 //	testsRan.push("	BALMN123	"); 
+
 //	testsRan.push("	BALM1T23	"); 
+
 //	testsRan.push("	BALM1T2	"); 
+
 //	testsRan.push("	BALMST123	"); 
+
 //	testsRan.push("	BALM12A3	"); 
+
 //	testsRan.push("	BALM12W3	"); 
+
 //	testsRan.push("	BALM1A2I3	"); 
+
 //	testsRan.push("	FALM123	"); 
+
 //	testsRan.push("	FALM12	"); 
+
 //	testsRan.push("	FALM122	"); 
+
 //	testsRan.push("	FALM1A23	"); 
+
 //	testsRan.push("	FALM1A2	"); 
+
 //	testsRan.push("	FALMT123	"); 
+
 //	testsRan.push("	FALMT122	"); 
+
 //	testsRan.push("	FALMT1A23	"); 
+
 //	testsRan.push("	FALMN123	"); 
+
 //	testsRan.push("	FALM1T23	"); 
+
 //	testsRan.push("	FALM1T2	"); 
+
 //	testsRan.push("	FALMST123	"); 
+
 //	testsRan.push("	FALM12A3	"); 
+
 //	testsRan.push("	FALM12W3	"); 
+
 //	testsRan.push("	FALM1A2I3	"); 
+
 //	testsRan.push("	<reserved for more AL->	"); 
+
 //	testsRan.push("	<reserved for more AL->	"); 
+
 //	testsRan.push("	<reserved for more AL->	"); 
+
 // basic conjugations	
+
 //	testsRan.push("	<reserved for more basic conjugations->	"); 
+
 //	testsRan.push("	A12	"); 
+
 //	testsRan.push("	A122	"); 
+
 //	testsRan.push("	AT123	"); 
+
 //	testsRan.push("	AT122	"); 
+
 //	testsRan.push("	A1A23	"); 
+
 //	testsRan.push("	AT1A23	"); 
+
 //	testsRan.push("	AT1A2	"); 
+
 //	testsRan.push("	<reserved for more basic conjugations->	"); 
+
 //	testsRan.push("	<reserved for more basic conjugations->	"); 
+
 //	testsRan.push("	<reserved for more basic conjugations->	"); 
+
 //	testsRan.push("	<reserved for more basic conjugations->	"); 
+
 //	testsRan.push("	<reserved for more basic conjugations->	"); 
+
 //	testsRan.push("	<reserved for more basic conjugations->	"); 
+
 //	testsRan.push("	<reserved for more basic conjugations->	"); 
+
 //	testsRan.push("	<reserved for more basic conjugations->	"); 
+
 //	testsRan.push("	<reserved for more basic conjugations->	"); 
+
 //	testsRan.push("	T12	"); 
+
 //	testsRan.push("	T122	"); 
+
 //	testsRan.push("	TT123	"); 
+
 //	testsRan.push("	TT122	"); 
+
 //	testsRan.push("	TT1A23	"); 
+
 //	testsRan.push("	TT1A2	"); 
+
 //	testsRan.push("	TN123	"); 
+
 //	testsRan.push("	TN12	"); 
+
 //	testsRan.push("	T1T23	"); 
+
 //	testsRan.push("	T1T2	"); 
+
 //	testsRan.push("	TST123	"); 
+
 //	testsRan.push("	TST12	"); 
+
 //	testsRan.push("	T12A3form11	"); 
+
 //	testsRan.push("	T12W23form12	"); 
+
 //	testsRan.push("	T12W3form13	"); 
+
 //	testsRan.push("	I123	"); 
+
 //	testsRan.push("	I12	"); 
+
 //	testsRan.push("	I122	"); 
+
 //	testsRan.push("	IT123	"); 
+
 //	testsRan.push("	IT122	"); 
+
 //	testsRan.push("	I1A23	"); 
+
 //	testsRan.push("	IT1A23	"); 
+
 //	testsRan.push("	IT1A2	"); 
+
 //	testsRan.push("	IN123	"); 
+
 //	testsRan.push("	IN12	"); 
+
 //	testsRan.push("	I1T23	"); 
+
 //	testsRan.push("	I1T2	"); 
+
 //	testsRan.push("	IST123	"); 
+
 //	testsRan.push("	IST12	"); 
+
 //	testsRan.push("	I12A3form11	"); 
+
 //	testsRan.push("	I12W23form12	"); 
+
 //	testsRan.push("	I12W3form13	"); 
+
 //	testsRan.push("	N123	"); 
+
 //	testsRan.push("	N12	"); 
+
 //	testsRan.push("	N122	"); 
+
 //	testsRan.push("	N1A23	"); 
+
 //	testsRan.push("	NT123	"); 
+
 //	testsRan.push("	NT122	"); 
+
 //	testsRan.push("	NT1A23	"); 
+
 //	testsRan.push("	NT1A2	"); 
+
 //	testsRan.push("	NN123	"); 
+
 //	testsRan.push("	NN12	"); 
+
 //	testsRan.push("	N1T23	"); 
+
 //	testsRan.push("	N1T2	"); 
+
 //	testsRan.push("	NST123	"); 
+
 //	testsRan.push("	NST12	"); 
+
 //	testsRan.push("	N12A3form11	"); 
+
 //	testsRan.push("	N12W23form12	"); 
+
 //	testsRan.push("	N12W3form13	"); 
+
 // FUTURE CONJUGATIONS	
+
 //	testsRan.push("	SA123	"); 
+
 //	testsRan.push("	SA12	"); 
+
 //	testsRan.push("	SA122	"); 
+
 //	testsRan.push("	SAT123	"); 
 //	testsRan.push("	SAT122	"); 
+
 //	testsRan.push("	SA1A23	"); 
+
 //	testsRan.push("	SAT1A23	"); 
+
 //	testsRan.push("	SAT1A2	"); 
+
 //	testsRan.push("	SA1T23	"); 
+
 //	testsRan.push("	SA1T2	"); 
+
 //	testsRan.push("	SAN123	"); 
+
 //	testsRan.push("	SAN12	"); 
+
 //	testsRan.push("	SAST123	"); 
+
 //	testsRan.push("	SAST12	"); 
+
 //	testsRan.push("	<reserved for future use>	"); 
+
 //	testsRan.push("	<reserved for future use>	"); 
+
 //	testsRan.push("	<reserved for future use>	"); 
+
 //	testsRan.push("	ST12	"); 
+
 //	testsRan.push("	ST122	"); 
+
 //	testsRan.push("	STT123	"); 
+
 //	testsRan.push("	STT122	"); 
+
 //	testsRan.push("	STT1A23	"); 
+
 //	testsRan.push("	STT1A2	"); 
+
 //	testsRan.push("	STN123	"); 
+
 //	testsRan.push("	STN12	"); 
+
 //	testsRan.push("	ST1T23	"); 
+
 //	testsRan.push("	ST1T2	"); 
+
 //	testsRan.push("	STST123	"); 
+
 //	testsRan.push("	STST12	"); 
 //	testsRan.push("	ST12A3form11	"); 
+
 //	testsRan.push("	ST12W23form12	"); 
+
 //	testsRan.push("	ST12W3form13	"); 
+
 //	testsRan.push("	SI123	"); 
+
 //	testsRan.push("	SI12	"); 
+
 //	testsRan.push("	SI122	"); 
+
 //	testsRan.push("	SIT123	"); 
+
 //	testsRan.push("	SIT122	"); 
+
 //	testsRan.push("	SI1A23	"); 
+
 //	testsRan.push("	SIT1A23	"); 
+
 //	testsRan.push("	SIT1A2	"); 
+
 //	testsRan.push("	SIN123	"); 
+
 //	testsRan.push("	SIN12	"); 
+
 //	testsRan.push("	SI1T23	"); 
+
 //	testsRan.push("	SI1T2	"); 
+
 //	testsRan.push("	SIST123	"); 
+
 //	testsRan.push("	SIST12	"); 
+
 //	testsRan.push("	SI12A3form11	"); 
+
 //	testsRan.push("	SI12W23form12	"); 
+
 //	testsRan.push("	SI12W3form13	"); 
+
 //	testsRan.push("	SN123	"); 
+
 //	testsRan.push("	SN12	"); 
+
 //	testsRan.push("	SN122	"); 
+
 //	testsRan.push("	SN1A23	"); 
+
 //	testsRan.push("	SNT123	"); 
+
 //	testsRan.push("	SNT122	"); 
+
 //	testsRan.push("	SNT1A23	"); 
+
 //	testsRan.push("	SNT1A2	"); 
+
 //	testsRan.push("	SNN123	"); 
+
 //	testsRan.push("	SNN12	"); 
+
 //	testsRan.push("	SN1T23	"); 
+
 //	testsRan.push("	SN1T2	"); 
+
 //	testsRan.push("	SNST123	"); 
+
 //	testsRan.push("	SNST12	"); 
+
 //	testsRan.push("	SN12A3form11	"); 
+
 //	testsRan.push("	SN12W23form12	"); 
+
 //	testsRan.push("	SN12W3form13	"); 
+
 //	testsRan.push("	LN123	"); 
+
 //	testsRan.push("	LN12	"); 
+
 //	testsRan.push("	LN122	"); 
 //	testsRan.push("	LN1A23	"); 
+
 //	testsRan.push("	LNT123	"); 
+
 //	testsRan.push("	LNT122	"); 
+
 //	testsRan.push("	LNT1A23	"); 
+
 //	testsRan.push("	LNT1A2	"); 
 //	testsRan.push("	LNN123	"); 
+
 //	testsRan.push("	LNN12	"); 
+
 //	testsRan.push("	LN1T23	"); 
 //	testsRan.push("	LN1T2	"); 
 //	testsRan.push("	LNST123	"); 

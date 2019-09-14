@@ -25,10 +25,10 @@ class OutputCommentsBox extends Component {
 
   const { mainTestOutputComments } = this.props;
 
-  console.log("commentsDisplay is ")
+  // console.log("commentsDisplay is ")
   
   var commentsDisplay = []
-  console.log(commentsDisplay)
+  // console.log(commentsDisplay)
   for (let i = 0; i < mainTestOutputComments.length; i++) {
    let comment = mainTestOutputComments[i]
    commentsDisplay.push(
@@ -38,7 +38,7 @@ class OutputCommentsBox extends Component {
    )
   }
 
-  console.log(commentsDisplay)
+  // console.log(commentsDisplay)
   var OutputDisplay = ""
   if (commentsDisplay.length > 0) {
  
@@ -55,8 +55,8 @@ class OutputCommentsBox extends Component {
   } else if (commentsDisplay === []) {
     OutputDisplay = ""
   }
-console.log("commentsDisplay is")
-console.log(commentsDisplay)
+// console.log("commentsDisplay is")
+// console.log(commentsDisplay)
 
 
 

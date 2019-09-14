@@ -32,10 +32,10 @@ class ScoreDisplay extends Component {
 
 
 
-      console.log(this.props)
+      // console.log(this.props)
       const { mainTestScore, mainTestOutputComments } = this.props;
-      console.log(mainTestScore)
-      console.log(mainTestOutputComments)
+      // console.log(mainTestScore)
+      // console.log(mainTestOutputComments)
 
 
 
