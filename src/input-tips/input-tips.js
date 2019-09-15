@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import './input-tips.css';
 
 class InputTips extends Component {
     constructor(){

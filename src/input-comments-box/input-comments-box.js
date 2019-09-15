@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import './input-comments-box.css';
 
-import InputComment from "../input-comment/input-comment";
+
 // import OTHERCOMPONENTS from "../FOLDER/JSFILE";
 
 
@@ -103,30 +103,11 @@ class InputCommentsBox extends Component {
             {rawInputDisplay}
             {assessedInputDisplay}
             <ul>
-              {inputCommentsDiplay}
-            </ul>
-            
-            {/* <InputComment testComment={'this is the term that will be assessed + ${inputObj.strippedInputArray}'}/> */}
+            {inputCommentsDiplay}
+            </ul>            
         </div>
       );
     }
   }
   
   export default InputCommentsBox;
-
-
-  // class Listing extends Component {  
-  //   render() {    
-  //     const {      
-  //       listing: {        
-  //         title,        
-  //         type,        
-  //         location: {          
-  //           city,          
-  //           state,          
-  //           country        }      }    } = this.props;
-
-
-
-
-

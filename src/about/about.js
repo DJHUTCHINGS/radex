@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import './about.css';
 
-//Note: This component isn't operational currently but will be eventaully.
+//Note: This component isn't currently operational 
 class About extends Component {
 
     constructor(){
