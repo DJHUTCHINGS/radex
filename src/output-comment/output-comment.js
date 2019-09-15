@@ -162,9 +162,9 @@
 
 //	testsRan.push("	M12	"); 
 
-//	testsRan.push("		"); 
+//	testsRan.push("	M1A2	"); 
 
-//	testsRan.push("		"); 
+//	testsRan.push("	M1A2	"); 
 
 //	testsRan.push("	MT122	"); 
 
@@ -172,7 +172,7 @@
 
 //	testsRan.push("		"); 
 
-//	testsRan.push("		"); 
+//	testsRan.push("	M1T2	"); 
 
 //	testsRan.push("		"); 
 
@@ -300,7 +300,7 @@
 
 //	testsRan.push("	12A3?	"); 
 
-//	testsRan.push("		"); 
+//	testsRan.push("	1A2	"); 
 
 //	testsRan.push("	12W3?	"); 
 
@@ -324,7 +324,7 @@
 
 //	testsRan.push("	T1A2؟؟؟؟؟	"); 
 
-//	testsRan.push("		"); 
+//	testsRan.push("	A12A2	"); 
 
 //	testsRan.push("		"); 
 
