@@ -83,99 +83,6 @@ class MainTests extends Component {
       //DO NOT ERASE THIS COMMENT DO NOT ERASE THIS COMMENT DO NOT ERASE THIS COMMENT DO NOT ERASE THIS COMMENT 
       
 
-      // mainTestResults.testsRan.push("initial م");
-      // if (inputLength > 3 && pos1 === "م") {mainTestResults.score[0][1] = mainTestResults.score[0][1] / diff;
-      // mainTestResults.mainTestOutputComments.push("If there is an initial meem, it is probably not part of the root.");
-      // }
-
-      // mainTestResults.testsRan.push("initial ا");
-      // if (inputLength > 4 && pos1 === "ا") {mainTestResults.score[0][1] = mainTestResults.score[0][1] / diff;
-      // mainTestResults.mainTestOutputComments.push("Aliphs are usually not part of the root");
-      // }
-
-      // mainTestResults.testsRan.push("initial الـ");
-      // if (inputLength > 4 && pos1 === "ا" && pos2 === "ل") {
-      //   mainTestResults.score[0][1] = mainTestResults.score[0][1] / diff;
-      //   mainTestResults.score[1][1] = mainTestResults.score[1][1] / diff;
-      //   mainTestResults.mainTestOutputComments.push("ال are usually not part of the root");
-      //   mainTestResults.ALword = true;
-      // }
-
-      // mainTestResults.testsRan.push("final ـها");
-      // if (inputLength > 5 && score[inputLength-1][0] === "ا" && score[inputLength-2][0] === "ه" ) {
-      //   mainTestResults.score[inputLength-1][1] = mainTestResults.score[inputLength-2][1] / diff;
-      //   mainTestResults.score[inputLength-2][1] = mainTestResults.score[inputLength-2][1] / diff;
-      //   mainTestResults.mainTestOutputComments.push("ِA ها at the end of the word is usually a pronoun");
-      // }
-
-
-
-// //TESTNOTE: 
-// mainTestResults.testsRan.push(
-//   "M123"
-//   ); 
-//   if (
-//       inputLength > 3 
-//       && 
-//       pos1 === "م"
-//       ) {
-//       mainTestResults.score[0][1] = pos1scr / diff;
-//       mainTestResults.mainTestOutputComments.push(
-//           "If there is an initial meem, it is probably not part of the root."
-//           );
-// }
-
-// //TESTNOTE: 
-// mainTestResults.testsRan.push(
-//   "A123"
-//   ); 
-// if (
-//   inputLength > 4 
-//   && pos1 === "ا"
-//   ) {
-//       mainTestResults.score[0][1] = pos1scr / diff;
-//       mainTestResults.mainTestOutputComments.push(
-//           "Aliphs are usually not part of the root"
-//           );
-//   };
-
-// //TESTNOTE: 
-// mainTestResults.testsRan.push(
-//   "AL123"
-//   );
-// if (
-//   inputLength > 4 
-//   && 
-//   pos1 === "ا" 
-//   && 
-//   pos2 === "ل"
-//   ) {
-//   mainTestResults.score[0][1] = pos1scr / diff;
-//   mainTestResults.score[1][1] = pos2scr / diff;
-//   mainTestResults.mainTestOutputComments.push(
-//       "ال are usually not part of the root"
-//       );
-//   mainTestResults.ALword = true;
-// }
-
-// //TESTNOTE: 
-// mainTestResults.testsRan.push(
-//   "123HA"
-//   );
-// if (
-//   inputLength > 5 
-//   && 
-//   lastPos === "ا" 
-//   && 
-//   secFrmEnd === "ه"
-//   ) {
-//   mainTestResults.score[inputLength-1][1] = lastPosScr / diff;
-//   mainTestResults.score[inputLength-2][1] = secFrmEndScr / diff;
-//   mainTestResults.mainTestOutputComments.push(
-//       "ِA ها at the end of the word is usually a pronoun"
-//       );
-// }
-
 
 
 console.log("start tests conversion on this test array:")
@@ -590,6 +497,105 @@ if (score[0] !== undefined) {
 }
 
 testFromInitials(score)
+
+
+
+
+      // mainTestResults.testsRan.push("initial م");
+      // if (inputLength > 3 && pos1 === "م") {mainTestResults.score[0][1] = mainTestResults.score[0][1] / diff;
+      // mainTestResults.mainTestOutputComments.push("If there is an initial meem, it is probably not part of the root.");
+      // }
+
+      // mainTestResults.testsRan.push("initial ا");
+      // if (inputLength > 4 && pos1 === "ا") {mainTestResults.score[0][1] = mainTestResults.score[0][1] / diff;
+      // mainTestResults.mainTestOutputComments.push("Aliphs are usually not part of the root");
+      // }
+
+      // mainTestResults.testsRan.push("initial الـ");
+      // if (inputLength > 4 && pos1 === "ا" && pos2 === "ل") {
+      //   mainTestResults.score[0][1] = mainTestResults.score[0][1] / diff;
+      //   mainTestResults.score[1][1] = mainTestResults.score[1][1] / diff;
+      //   mainTestResults.mainTestOutputComments.push("ال are usually not part of the root");
+      //   mainTestResults.ALword = true;
+      // }
+
+      // mainTestResults.testsRan.push("final ـها");
+      // if (inputLength > 5 && score[inputLength-1][0] === "ا" && score[inputLength-2][0] === "ه" ) {
+      //   mainTestResults.score[inputLength-1][1] = mainTestResults.score[inputLength-2][1] / diff;
+      //   mainTestResults.score[inputLength-2][1] = mainTestResults.score[inputLength-2][1] / diff;
+      //   mainTestResults.mainTestOutputComments.push("ِA ها at the end of the word is usually a pronoun");
+      // }
+
+
+
+// //TESTNOTE: 
+// mainTestResults.testsRan.push(
+//   "M123"
+//   ); 
+//   if (
+//       inputLength > 3 
+//       && 
+//       pos1 === "م"
+//       ) {
+//       mainTestResults.score[0][1] = pos1scr / diff;
+//       mainTestResults.mainTestOutputComments.push(
+//           "If there is an initial meem, it is probably not part of the root."
+//           );
+// }
+
+// //TESTNOTE: 
+// mainTestResults.testsRan.push(
+//   "A123"
+//   ); 
+// if (
+//   inputLength > 4 
+//   && pos1 === "ا"
+//   ) {
+//       mainTestResults.score[0][1] = pos1scr / diff;
+//       mainTestResults.mainTestOutputComments.push(
+//           "Aliphs are usually not part of the root"
+//           );
+//   };
+
+// //TESTNOTE: 
+// mainTestResults.testsRan.push(
+//   "AL123"
+//   );
+// if (
+//   inputLength > 4 
+//   && 
+//   pos1 === "ا" 
+//   && 
+//   pos2 === "ل"
+//   ) {
+//   mainTestResults.score[0][1] = pos1scr / diff;
+//   mainTestResults.score[1][1] = pos2scr / diff;
+//   mainTestResults.mainTestOutputComments.push(
+//       "ال are usually not part of the root"
+//       );
+//   mainTestResults.ALword = true;
+// }
+
+// //TESTNOTE: 
+// mainTestResults.testsRan.push(
+//   "123HA"
+//   );
+// if (
+//   inputLength > 5 
+//   && 
+//   lastPos === "ا" 
+//   && 
+//   secFrmEnd === "ه"
+//   ) {
+//   mainTestResults.score[inputLength-1][1] = lastPosScr / diff;
+//   mainTestResults.score[inputLength-2][1] = secFrmEndScr / diff;
+//   mainTestResults.mainTestOutputComments.push(
+//       "ِA ها at the end of the word is usually a pronoun"
+//       );
+// }
+
+
+
 
 
 
