@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import './footer.css';
 
-// import OTHERCOMPONENTS from "../FOLDER/JSFILE";
-
-
 class Footer extends Component {
     // probably not needed here
     constructor(){
@@ -13,8 +10,6 @@ class Footer extends Component {
         //   PROP2:'DEFAULT'
         }
       }
-
- 
 
     render() {
       return (

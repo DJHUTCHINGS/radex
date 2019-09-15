@@ -1,20 +1,15 @@
 import React, { Component } from "react";
 import './about.css';
 
-// import OTHERCOMPONENTS from "../FOLDER/JSFILE";
-
-
+//Note: This component isn't operational currently but will be eventaully.
 class About extends Component {
-    // probably not needed here
+
     constructor(){
         super()
         this.state = {
-        //   PROPERTY:'',
-        //   PROP2:'DEFAULT'
+
         }
       }
-
- 
 
     render() {
       return (
