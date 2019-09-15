@@ -25,6 +25,7 @@ class InputTips extends Component {
       return (
         <div className="">
             <h5 className="input-tip">TIP: 1 word only; all spaces ignored. </h5>
+            <h5 className="input-tip">Please wait... it takes a couple seconds to run hundreds of tests. </h5>
         </div>
       );
     }
