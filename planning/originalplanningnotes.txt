@@ -1,0 +1,205 @@
+NOTE: The following are some notes I made for myself early in the process and don't reflect the current app.
+
+
+RADICAL EXPLODER (ORIG NOTES) 
+
+https://medium.com/@davejh76/radical-exploder-an-online-application-for-helping-beginning-arabic-students-determine-word-roots-73a16b46a627?sk=c19d34be4af87f8324f2977fea9337b2
+
+
+
+learn Arabic Better 
+
+Top term 
+
+Top root 
+
+User comments for words and roots 
+
+Flagging system / reporting system 
+
+And ratings for analyses 
+
+Repeated characters test 
+
+option to tell it verb, noun/adjective, other/unknown
+
+https://en.wikipedia.org/wiki/Arabic_script_in_Unicode
+
+Import sets of words and sort through one by one
+- good for testing 
+
+Make it a game where students guess the root 
+
+
+======UTILITIES ======
+inputValidator: 
+- A basic function for making sure the input doesn’t break any obvious rules - - ie, it isn’t too long or too short or the wrong language, etc. 
+
+Function = inputTermExists
+- a function that sees if the inputted term has been inputted before 
+- (this functionality won’t actually be used yet)
+
+Function = englishUpperCaser
+	- If input language, the input is changed to uppercase. 
+
+allowedCharacters
+An object where each property is the variable for the allowed characters, and the values are the inputed characters that will be converted into it, including SATTS.
+
+characterConverter:
+a function that turns the input into an array of allowed characters 
+
+objectCreator:
+a function which creates an object out of the characterConverter and possibly some of the properties of the original term.
+
+termObjectChecker:
+	- a basic function for seeing if the termObject has been created before and is in memory. 
+	- Not implemented yet
+
+
+
+=====ANALYSIS======
+
+preliminaryAnalysis:
+	- run checks and deliver messages on 1-2 character terms
+	- run check and deliver messages on taa marbuta 
+	- if a lot of content was stripped out, maybe warn the user that something might have been inputted wrong - - ie not the correct language, ie dari, pashtun, etc.
+
+knownWordChecker
+	- checks for easy short words that all students should know - prepositions, etc.
+
+vowelChecker
+	-ID which terms are vowels or consonants 
+	- add 5 points to all consonants
+
+aliphLamChecker
+	- look for AL- patterns
+	AL-, LL-, WAL-
+	- add 20 points to the next two letters that are not meem, t, or aliph, and 10 points to the the
+
+aliphLamStripper
+	-  create a version of the word after the AL-
+
+
+meemChecker
+	- look for meems
+	- if there is a ALM-, LLM-, WALM, WM-, followed by at least 2 characters, at 20 points to consonants that are not t, 
+
+meemStripper
+	- create a version of the word after the meem 
+
+possessiveChecker
+	- look for possessive pronouns at end of words
+		-?
+		-?A
+		-?N
+		-?M
+
+conjugationChecker
+	- look for indications of conjugation
+	initial: 	
+		- I-
+		- T-
+		- N- 
+	final: 
+		-?
+		-ha
+		-t
+		-at
+		-IN
+		-IN
+		-WA
+		-N
+		- A
+
+pluralChecker
+		-IN, -WN, -AT, -W, -A
+
+nisbaChecker:
+		-I and -iyah
+		
+nuunationChecker
+		-A
+
+
+
+easyPositivesChecker
+	- look for letters like Q and add 25 points 
+
+quadChecker
+	- look for indications that the word is quadraliteral 
+	after AL and Meems are stripped, 
+
+quadMeas2Checker
+	- 
+
+quadMeas3Checker
+	- 
+
+nonTriChecker
+	- look for indications that the word may not have a triliteral root.
+
+Meas1Checker
+	- look for 3 letters, no meem, etc.
+
+Meas2Checker
+	- look for shedda, etc.
+
+meas3Checker
+	- look for aliph 
+	- M1A23 = add 10 pts to 1 and 2, 5 points to 3
+	- MA23 = at 5 pts to 2, 3
+	-M1A2
+
+meas4Checker
+	- initial aliph, possibly with conjugation at end
+
+meas5Checker
+	- initial t, etc.
+	- MT123 - 15 pts to 23, 10 pts to 3
+	- T123 - 10 pts to 23, 5 pts to 3
+	
+
+meas6Checker
+	- initial t followed by aliph 
+	- T1A23
+
+meas7Checker
+	- initial AN- or second N or MN, etc.
+
+meas8Checker
+	- is there a t in the middle of the term
+	- look for Taa sandwiched between Sad, Daad, etc. 
+
+meas9Checker
+	- mostly in the verbal noun
+
+meas10checker
+	- AST- , MST, TST, IST, + 2+ characters 
+
+meas11Checker
+	- 
+	
+meas12Checker
+	- 
+
+meas13Checker
+	- 
+
+
+
+===========
+
+Why is this approach different/better for the beginner:
+I don’t assume you know anything about Arabic grammar.  Other tools are for more sophisticated learners of ARabic, and my goal to help the earliest students use a hans wehr as soon as possible.
+The tool ins’t meant to be always correct, but to help students “see” the root in the word, even if they don’t quite understand why it is there. 
+
+
+http://thearamaster.com/
+
+https://ejtaal.net/aa/#hw4=1109,ll=2842,ls=49,la=4307,sg=1106,ha=753,br=933,pr=151,vi=363,mgf=796,mr=697,mn=1370,aan=645,kz=2574,uqq=382,ulq=1632,uqa=409,uqw=1598,umr=1051,ums=884,umj=817,bdw=859,amr=618,asb=955,auh=1569,dhq=549,mht=876,msb=231,tla=94,amj=802,ens=1,mis=2067
+
+ 
+http://aratools.com/
+
+http://acon.baykal.be/
+
