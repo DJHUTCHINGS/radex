@@ -24,6 +24,7 @@ class SampleText extends Component {
         <div className="sample-text">
             <h4>Free samples!</h4>
             <p>Don't know any Arabic? Try these words:</p>
+            <p>(Some of these words are loan words and will not produce accurate results.)</p>
             <p>مدرسة سيستعملوها استقبال وتنظر واشنطن 
               إلى تلك القوات باعتبارها حليفا أساسيا في مواجهة مسلحي تنظيم
                الدولة عازلة تبلغ مساحتها كيلومترا على الحدود مع سوريا، وإنها 

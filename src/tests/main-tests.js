@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-
-
- 
 import OutputCharsBox from "../output-chars-box/output-chars-box";
 import OutputCommentsBox from "../output-comments-box/output-comments-box";
 import ScoreDisplay from "../score-display/score-display";
@@ -10,17 +7,14 @@ import { ReadStream } from "tty";
 import { CodeGenerator } from "@babel/generator";
 
 class MainTests extends Component {
-    // probably not needed here
+
     constructor(props){
         super(props)
         this.state = {
-
         }
         this.runMainTests = this.runMainTests.bind(this);
       }
-
       runMainTests(strippedInput, score) {
-      // console.log("now starting main tests...")
       let mainTestResults = {
         score: score,
         meemWord: false,
@@ -30,11 +24,7 @@ class MainTests extends Component {
         mainTestOutputComments: []
       }
       let inputLength = mainTestResults.score.length
-      //add extra spaces to word for tests:
-      
-
-      // 	===	[length - 5]	 &&		===	[length - 4]	 &&		===	[length - 3]	 &&	thirdFrmEnd	===	[length - 2]	 &&	
-
+//This produces variables representing each character and its score which can be useful for some tests
       if (inputLength !== undefined && inputLength > 0) {
 
         var pos1 = mainTestResults.score[0][0]
@@ -77,40 +67,34 @@ class MainTests extends Component {
           }
         }
       }
-      // console.log(pos1, pos1scr, pos2, pos2scr, pos3, pos3scr, pos4, pos4scr)
       const diff = 100/inputLength;
-      //START TESTS START TESTS START TESTS START TESTS START TESTS START TESTS START TESTS 
-      //DO NOT ERASE THIS COMMENT DO NOT ERASE THIS COMMENT DO NOT ERASE THIS COMMENT DO NOT ERASE THIS COMMENT 
-      
 
 
-
-console.log("start tests conversion on this test array:")
 function testFromInitials(score) {
   var testsArray = [
-      ["M1A23", "Form 3"],
-      ["M123", "A basic meem word"],
-      ["MT123", "Form 5"],
-      ["MT1A23", "Form 6"],
-      ["MN123", "Form 7"],
-      ["M1T23", "Form 8"],
-      ["MST123", "Form 10"],
-      ["M12A3", "Possibly a Form 1 Noun of Instrument, etc."],
-      ["M12W3", "Possibly a Form 1 Passive Participle"],
-      ["M1A2I3", "XXXX comment: PENDING"],
-      ["1A23", "Form 1 Active Participle"],
-      ["12I3", "Form 1"],
-      ["12A3", "Form 1"],
-      ["TM123", "Rare"],
-      ["12W3", "Probably Form 1"],
-      ["1A2W3", "Like qamus/Dictionary"],
-      ["1WA2I3", "Like the plural Qawamis/Dictionaries"],
-      ["T12I3", "Probably a Form 2 Verbal Noun"],
-      ["A123", "This could be lots of things"],
-      ["A12A3", "Possibly a Form 4 verbal noun or a plural of something"],
-      ["T123", "This could be a number of things"],
-      ["T1A23", "Probably Form 3 or 6"],
-      ["AN123", "Form 7"],
+      ["M1A23", "M1A23: Form 3"],
+      ["M123", "M123: A basic meem word"],
+      ["MT123", "MT123: Form 5"],
+      ["MT1A23", "MT1A23: Form 6"],
+      ["MN123", "MN123 Form 7"],
+      ["M1T23", "M1T23: Form 8"],
+      ["MST123", "MST123: Form 10"],
+      ["M12A3", "M12A3: Possibly a Form 1 Noun of Instrument, etc."],
+      ["M12W3", "M12W3: Possibly a Form 1 Passive Participle"],
+      ["M1A2I3", "M1A2I3 comment: PENDING"],
+      ["1A23", "1A23: Form 1 Active Participle"],
+      ["12I3", "12I3: Form 1"],
+      ["12A3", "12A3: Form 1"],
+      ["TM123", "TM123: Rare"],
+      ["12W3", "12W3: Probably Form 1"],
+      ["1A2W3", "1A2W3: Like qamus/Dictionary"],
+      ["1WA2I3", "1WA2I3: Like the plural Qawamis/Dictionaries"],
+      ["T12I3", "T12I3: Probably a Form 2 Verbal Noun"],
+      ["A123", "A123: This could be lots of things"],
+      ["A12A3", "A12A3: Possibly a Form 4 verbal noun or a plural of something"],
+      ["T123", "T123: This could be a number of things"],
+      ["T1A23", "T1A23: Probably Form 3 or 6"],
+      ["AN123", "AN123: Form 7"],
       ["AN12A3", "Form 7 verbal noun"],
       ["A1T23", "A1T23 comment: Form 8"],
       ["A1T2A3", "A1T2A3 comment: Form 8 verbal noun"],
@@ -328,19 +312,23 @@ function testFromInitials(score) {
       ["FSNST123", "FSNST123 comment: Form 10"],
       ["WAN123", "WAN123 comment: Form 7?"],
       ["AL1A23", "AL1A23 comment: Form 1 active participle?"],
-      ["K123", "XXXX comment: PENDING"],
-      ["KAL123", "XXXX comment: PENDING"],
-      ["KT123", "XXXX comment: PENDING"],
-      ["KA123", "XXXX comment: PENDING"],
-      ["KM123", "XXXX comment: PENDING"],
-      ["KT1A23", "XXXX comment: PENDING"],
-      ["K1A23", "XXXX comment: PENDING"],
+      ["K123", "K123 comment: A K at the start of a long term is probably not part of the root"],
+      ["KAL123", "KAL123 comment: A K at the start of a long term is probably not part of the root"],
+      ["KT123", "KT123 comment: A K at the start of a long term is probably not part of the root"],
+      ["KA123", "KA123 comment: A K at the start of a long term is probably not part of the root"],
+      ["KM123", "KM123 comment: A K at the start of a long term is probably not part of the root"],
+      ["KT1A23", "KT1A23 comment: A K at the start of a long term is probably not part of the root"],
+      ["K1A23", "K1A23 comment: A K at the start of a long term is probably not part of the root"],
     
       ]
-  // var originalTestsArray = testsArray
-  console.log(testsArray)
+
   var conversionKey = [
       ["X", "X"],
+      ["x", "X"],
+      ["Y", "X"],
+      ["y", "X"],
+      ["Z", "X"],
+      ["z", "X"],
       ["M", "م"],
       ["A", "ا"],
       ["S", "س"],
@@ -353,8 +341,6 @@ function testFromInitials(score) {
       ["B", "ب"],
       ["F", "ف"],
       ["N", "ن"],
-      ["Y", "X"],
-      ["Z", "X"],
       ["K", "ك"],
       ["1", "X"], 
       ["2", "X"],
@@ -369,25 +355,17 @@ function testFromInitials(score) {
   for (let i = 0; i < testsArray.length; i++) {
       //this selects on of the test models
       let thisTest = testsArray[i][0]
-      console.log("converting this test:")
-      console.log(thisTest)
       //this splits the model into an array
       let thisTestArray = thisTest.split("")
-      // console.log("this test array is:")
-      // console.log(thisTestArray)
       //this cycles through every letter in the model
       var newTestWordArray = []
       for (let j = 0; j < thisTestArray.length; j++) {
         //this assigns the letter to a variable
         let thisCharacter = thisTestArray[j][0]
-        // console.log("the letter being looked at is:")
-        // console.log(thisCharacter)
         for (let k = 0; k < conversionKey.length; k++) {
           if (thisCharacter === conversionKey[k][0]) {
-            // console.log(thisCharacter + " matches " + conversionKey[k][1])
+ 
             var switchLetter = conversionKey[k][1]
-            // console.log("the new letter is:")
-            // console.log(switchLetter)
             newTestWordArray.push(switchLetter)
           }
           // console.log("the new test word array is now:")
@@ -447,41 +425,40 @@ if (score[0] !== undefined) {
         console.log("the input character matches the test character")
         thisTestScore.push(1)
        } else {
-         console.log("there is not a match") 
+        //  console.log("there is not a match") 
        }
-      console.log("the score array for this test is")
-      console.log(thisTestScore) 
+      // console.log("the score array for this test is")
+      // console.log(thisTestScore) 
       if (thisTestScore.length === thisTestLength) {
-        console.log("the term passed the test")
+        // console.log("the term passed the test")
         mainTestResults.mainTestOutputComments.push(
           thisTestComment
           );
           //Set new score
 
           for (let pos = 0; pos < thisTestLength; pos++) {
-            console.log("now setting score...")
+            // console.log("now setting score...")
             if (thisTestArray[pos] === "X") {
-              console.log("the input can be anything so there is no change in score")
+              // console.log("the input can be anything so there is no change in score")
               
              } else if (thisTestArray[pos] === score[pos][0]) {
-              console.log("the input character matches the test character so it loses points")
-              console.log("the score was:")
+              // console.log("the input character matches the test character so it loses points")
+              // console.log("the score was:")
               console.log(mainTestResults.score[pos][1])
-              console.log("now the score is:")
+              // console.log("now the score is:")
               mainTestResults.score[pos][1] = mainTestResults.score[pos][1] / diff;
               console.log(mainTestResults.score[pos][1])
              } else {
-               console.log("there is not a match so this output shouldn't run") 
+              //  console.log("there is not a match so this output shouldn't run") 
              }
           }
 
       } else {
-        console.log("the term failed the test")
+        // console.log("the term failed the test")
       }
       }
-
   } else {
-    console.log("the input is not long enough to be tested against " + thisTestName)
+    // console.log("the input is not long enough to be tested against " + thisTestName)
   }
 
 
@@ -498,35 +475,7 @@ if (score[0] !== undefined) {
 
 testFromInitials(score)
 
-
-
-
-      // mainTestResults.testsRan.push("initial م");
-      // if (inputLength > 3 && pos1 === "م") {mainTestResults.score[0][1] = mainTestResults.score[0][1] / diff;
-      // mainTestResults.mainTestOutputComments.push("If there is an initial meem, it is probably not part of the root.");
-      // }
-
-      // mainTestResults.testsRan.push("initial ا");
-      // if (inputLength > 4 && pos1 === "ا") {mainTestResults.score[0][1] = mainTestResults.score[0][1] / diff;
-      // mainTestResults.mainTestOutputComments.push("Aliphs are usually not part of the root");
-      // }
-
-      // mainTestResults.testsRan.push("initial الـ");
-      // if (inputLength > 4 && pos1 === "ا" && pos2 === "ل") {
-      //   mainTestResults.score[0][1] = mainTestResults.score[0][1] / diff;
-      //   mainTestResults.score[1][1] = mainTestResults.score[1][1] / diff;
-      //   mainTestResults.mainTestOutputComments.push("ال are usually not part of the root");
-      //   mainTestResults.ALword = true;
-      // }
-
-      // mainTestResults.testsRan.push("final ـها");
-      // if (inputLength > 5 && score[inputLength-1][0] === "ا" && score[inputLength-2][0] === "ه" ) {
-      //   mainTestResults.score[inputLength-1][1] = mainTestResults.score[inputLength-2][1] / diff;
-      //   mainTestResults.score[inputLength-2][1] = mainTestResults.score[inputLength-2][1] / diff;
-      //   mainTestResults.mainTestOutputComments.push("ِA ها at the end of the word is usually a pronoun");
-      // }
-
-
+//ADITIONAL TESTS ADITIONAL TESTS ADITIONAL TESTS ADITIONAL TESTS ADITIONAL TESTS
 
 // //TESTNOTE: 
 // mainTestResults.testsRan.push(
@@ -604,25 +553,12 @@ testFromInitials(score)
       return mainTestResults
       }
 
-
-
     render(props) {
-        // console.log("At Main Tests now")
-        //the following needs to be updated
-        // console.log(this.props.rawInput)
         const { newInputObj } = this.props;
         const {score, rawInput, strippedInput} = newInputObj;
-        console.log(score)
-
 var mainTestResults = this.runMainTests(strippedInput, score);
-// console.log("the main test results handed back are:")
-// console.log(mainTestResults)
-
-
       const { ALword, mainTestOutputComments, meemWord, testsRan, verbalNoun } = mainTestResults
       var mainTestScore = mainTestResults.score
-  
-
 //this may not be necessary
 var finalResultsObject = {
   rawInput: rawInput, 
@@ -636,18 +572,14 @@ var finalResultsObject = {
 }
 console.log(finalResultsObject)
 
-
-
-
       return (
         <div className="">
-            {/* <h5>main test input received is: //need to get from inputObj. This will not be seen in final</h5> */}
-       
             <OutputCharsBox mainTestScore={mainTestScore} mainTestOutputComments={mainTestOutputComments}/>
-          
+            {/* Keep this in case we want to display Score Display for trouble shooting, QC */}
             {/* <ScoreDisplay finalResultsObject={finalResultsObject}/> */}
         </div>
     );
+    //end of render
     }
   }
   

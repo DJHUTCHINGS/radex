@@ -2,51 +2,31 @@ import React, { Component } from "react";
 import './output-chars-box.css';
 import OutputCommentsBox from "../output-comments-box/output-comments-box";
 import ScoreDisplay from "../score-display/score-display";
-// import OTHERCOMPONENTS from "../FOLDER/JSFILE";
-
 
 class OutputCharsBox extends Component {
     constructor(props){
         super(props)
         this.state = {
-        //   PROPERTY:'',
-        //   PROP2:'DEFAULT'
         }
       }
-
-
-
     render(props) {
-      // let mainTestOutputComments = []
-      // let mainTestScore = []
       if (this.props !== undefined) {
-
-
+        //this is probably no longer necessary
       }
-      // console.log(this.props)
-      // const { } = this.props;
       const { mainTestScore, mainTestOutputComments } = this.props;
-      console.log("start output chars box")
-      console.log(mainTestScore)
-      console.log(mainTestOutputComments)
-      //push cahracter  comments to main comments
+      //push character comments from the basic tests to main comments
       for (let i = 0; i < mainTestScore.length; i++) {
         let thisComment = mainTestScore[i][2]
         mainTestOutputComments.push(thisComment)
       }
-      console.log(mainTestOutputComments)
-
-
+      //this modifies the scores in preparation for converting them to font sizes
+      //it may not actually do much right now
       var scoreDisplay = []
       var fontSizeBase = 0;
       for (let i = 0; i < mainTestScore.length; i++) {
-     
         fontSizeBase = fontSizeBase + mainTestScore[i][1]
       }
-      console.log("fontSizeBase is " + fontSizeBase)
-
-
-      //create score spans
+      //Sets up the individual characters and their font size 
       for (let i = 0; i < mainTestScore.length; i++) {
        let char = mainTestScore[i][0]
        let scr = mainTestScore[i][1]
@@ -56,15 +36,12 @@ class OutputCharsBox extends Component {
          fontSize: `${size}px`,
          color: "blue"
         }
-      // console.log(divStyle)
-       scoreDisplay.push(
-          
+        //this pushes the JSX that will display the characters to an array
+       scoreDisplay.push(  
           <span style={divStyle}>{char} </span>
-     
-         
        )
- 
       } 
+        //this contains any text that we want to appear only if their are characters displayed
       var outputDisplay = []
       if (mainTestScore.length > 0) {
         outputDisplay = [
@@ -73,11 +50,8 @@ class OutputCharsBox extends Component {
           </div>
         ] 
       }
-   
-
       return (
         <div className="">
-           
             {outputDisplay}
             {scoreDisplay}
             <OutputCommentsBox mainTestOutputComments={mainTestOutputComments}/>

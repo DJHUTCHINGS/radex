@@ -1,28 +1,19 @@
 import React, { Component } from "react";
-
-import OutputCharsBox from "../output-chars-box/output-chars-box";
-import OutputCommentsBox from "../output-comments-box/output-comments-box";
-import ScoreDisplay from "../score-display/score-display";
 import MainTests from "./main-tests"
 
 class BasicTests extends Component {
-    // probably not needed here
     constructor(props){
         super(props)
         this.state = {
-
         }
         this.basicTest = this.basicTest.bind(this);
         this.initialScore = this.initialScore.bind(this);
       }
 
 basicTest(strippedInputArray) {
-  // console.log("now we are running hte basic test")
   var score = this.initialScore(strippedInputArray)
   if (score.length > 0) {
-    // console.log("now we run first tests")
     for (let i = 0; i < strippedInputArray.length; i++) {
-      // console.log("now testing the index " + i + ", which is " + strippedInputArray[i])
 	      if (score[i][0] ===	"ا"	) {score[i][1] = score[i][1] 	/ 	2	; score[i][2]  = ["An aliph is used for numerous grammatical reasons and usually should not be assumed to be part of the root unless all other options have been ruled out."	]};																													
 	      if (score[i][0] ===	"ب"	) {score[i][1] = score[i][1] 	*	1.25	; score[i][2]  = ["If a ب is at the start of the term, it is probably not part of the root; otherwise it probably is."	]};																													
 	      if (score[i][0] ===	"ج"	) {score[i][1] = score[i][1] 	*	2	; score[i][2]  = ["A ج is always part of the root."	]};																													
@@ -55,28 +46,14 @@ basicTest(strippedInputArray) {
 	      if (score[i][0] ===	"ى"	) {score[i][1] = score[i][1] 	/ 	1.25	; score[i][2]  = [	"The aliph maksurah often indicates that it or a regular aliph is part of the root."	]};																													
 	      if (score[i][0] ===	"ؤ"	) {score[i][1] = score[i][1] 	*	1.50	; score[i][2]  = [	"A waaw with a hamzah seated on it often indicates that a hamzah or hamzah on an aliph is in the root, but it has been modified for grammatical reasons."	]};																													
 	      if (score[i][0] ===	"ئ"	) {score[i][1] = score[i][1] 	*	1.50	; score[i][2]  = [	"A seated hamzah or hamzah on an an aliph maksurah often indicates that a hamzah of some type is part of the root."	]};																																																								
-
     }
-
-
-
-  } else {
-    // console.log("there is nothing to score")
-  }
-
-// console.log("the final score array is:")
-// console.log(score)
+  } 
 return score
   //end of basic text
 }
 
-
-
 initialScore(strippedInputArray) {
-// console.log("creating intitial score out of the following array")
-// console.log(strippedInputArray)
 let score = []
-
 if (strippedInputArray !== undefined) {
   console.log("stripped input array does exist")
   //initial score is set as a percentage based on how many letters there are
@@ -89,29 +66,13 @@ if (strippedInputArray !== undefined) {
       let letterScoreArray = [thisCharacter, defaultScore, emptyCommentArray]
       score.push(letterScoreArray)
     }
-
-  } else {
-    // console.log("stripped input is zero")
   }
-
-} else {
-  // console.log("there is no valid input to assess")
 }
-
-// console.log("The initial score array is:")
-// console.log(score)
 return score;
 }
 
-
-
-
     render(props) {
-        console.log("At Basic Tests now")
-
         const { inputObj } = this.props;
-        // console.log("inputObj is:" )
-        // console.log(inputObj)
         const {     
           rawInput,
           rawInputArray,
@@ -131,24 +92,6 @@ return score;
             } = inputObj;
   
         var basicTestScore = this.basicTest(strippedInputArray)
-        console.log("the results are of the basic test are:")
-        console.log(basicTestScore)
-
-        if (strippedInputArray !== undefined) {
-          // console.log("arabicOnlyArray is")
-          // console.log(strippedInputArray)
-          // console.log(strippedInputArray[0])
-        }
-  
-        if (rawInput !== undefined) {
-          // console.log("rawInput is")
-          // console.log(rawInput)
-        }
-  
-        if (arabicOnlyArray !== undefined) {
-          // console.log("arabicOnlyArray is")
-          // console.log(arabicOnlyArray)
-        }
         
         var newInputObj = {
           rawInput: rawInput,
@@ -157,20 +100,9 @@ return score;
           score: basicTestScore,
         }
 
-        console.log("the new input object is as follows:")
-        console.log(newInputObj)
-
-
-
-
-
       return (
         <div className="">
-            {/* <h5>at basic tests and awaiting modification </h5> */}
-            <MainTests newInputObj={newInputObj}/>
-            {/* <OutputCharsBox /> */}
-            {/* <OutputCommentsBox score={score}/> */}
-            {/* <ScoreDisplay inputObj={this.props.inputObj}/> */}
+            <MainTests newInputObj={newInputObj}/> 
         </div>
       );
     }
