@@ -72,7 +72,10 @@ class MainTests extends Component {
 
 function testFromInitials(score) {
   var testsArray = [
+
       ["M1A23", "M1A23: Form 3"],
+      ["LA123", "LA123: Possible superlative"],
+      ["L123", "LA123: Possible superlative"],
       ["M123", "M123: A basic meem word"],
       ["MT123", "MT123: Form 5"],
       ["MT1A23", "MT1A23: Form 6"],
@@ -104,9 +107,9 @@ function testFromInitials(score) {
       ["AL12I3", "AL123 comment: Form 1?"],
       // ["AL1234", "AL1234 comment: PENDING"],
       // ["ALT1234", "ALT1234 comment: PENDING"],
-      ["AL12A3", "AL12A3 comment: PENDING"],
-      ["AL12W3", "AL12W3 comment: PENDING"],
-      ["AL1A2W3", "AL1A2W3 comment: PENDING"],
+      ["AL12A3", "AL12A3 comment: "],
+      ["AL12W3", "AL12W3 comment: "],
+      ["AL1A2W3", "AL1A2W3 comment: "],
       ["ALT12I3", "ALT12I3 comment: Form 2 verbal noun"],
       ["ALA123", "ALA123 comment: Superlative"],
       ["ALA12A3", "ALA12A3 comment: Form 4 verbal noun or some kind of plural"],
@@ -129,52 +132,52 @@ function testFromInitials(score) {
       ["LLA1T2A3", "LLA1T2A3 comment: Form 8"],
       // ["LLA123A3", "LLA123A3 comment: PENDING"],
       ["LLAST12A3", "LLAST12A3 comment: Form 10 "],
-      ["BAL123", "BAL123 comment: PENDING"],
-      ["BAL12A3", "BAL12A3 comment: PENDING"],
-      ["BAL12W3", "BAL12W3 comment: PENDING"],
-      ["BAL1A2W3", "BAL1A2W3 comment: PENDING"],
-      ["BAL1WA2I3", "BAL1WA2I3 comment: PENDING"],
+      ["BAL123", "BAL123 comment: "],
+      ["BAL12A3", "BAL12A3 comment: "],
+      ["BAL12W3", "BAL12W3 comment: "],
+      ["BAL1A2W3", "BAL1A2W3 comment: "],
+      ["BAL1WA2I3", "BAL1WA2I3 comment: "],
       ["BALT12I3", "BALT12I3 comment: Form 2 verbal noun"],
-      ["BALA123", "BALA123 comment: PENDING"],
-      ["BALA12A3", "BALA12A3 comment: PENDING"],
+      ["BALA123", "BALA123 comment: "],
+      ["BALA12A3", "BALA12A3 comment: "],
       ["BALT123", "BALT123 comment: Form 5 verbal noun"],
       ["BAST12A3", "BALT123 comment: Form 5 verbal noun"],
       ["BALAN12A3", "BALAN12A3 comment: Form 7"],
       ["BALA1T2A3", "BALA1T2A3 comment: Form 8"],
-      ["FAL123", "FAL123 comment: PENDING"],
-      ["FAL12A3", "FAL123 comment: PENDING"],
-      ["FAL12W3", "FAL12W3 comment: PENDING"],
-      ["BALT1A23", "BALT1A23 comment: PENDING"],
-      ["BALAST12A3", "BALAST12A3 comment: PENDING"],
-      ["BA1T2A3", "BA1T2A3 comment: PENDING"],
-      ["FAL1A2W3", "FAL1A2W3 comment: PENDING"],
-      ["FAL1WA2I3", "FAL1WA2I3 comment: PENDING"],
-      ["FALT12I3", "FALT12I3 comment: PENDING"],
-      ["FALA123", "FALA123 comment: PENDING"],
-      ["FALA12A3", "FALA12A3 comment: PENDING"],
+      ["FAL123", "FAL123 comment: "],
+      ["FAL12A3", "FAL123 comment: "],
+      ["FAL12W3", "FAL12W3 comment: "],
+      ["BALT1A23", "BALT1A23 comment: "],
+      ["BALAST12A3", "BALAST12A3 comment: "],
+      ["BA1T2A3", "BA1T2A3 comment: "],
+      ["FAL1A2W3", "FAL1A2W3 comment: "],
+      ["FAL1WA2I3", "FAL1WA2I3 comment: "],
+      ["FALT12I3", "FALT12I3 comment: "],
+      ["FALA123", "FALA123 comment: "],
+      ["FALA12A3", "FALA12A3 comment: "],
       ["FALT123", "FALT123 comment: Form 5"],
-      ["FALT1A23", "FALT1A23 comment: PENDING"],
+      ["FALT1A23", "FALT1A23 comment: "],
       ["FALAN12A3", "FALAN12A3 comment: Form 7"],
       ["FALA1T2A3", "FALA1T2A3 comment: Form 8"],
       ["FALAST12A3", "FALAST12A3 comment: Form 10"],
-      ["ALM123", "ALM123 comment: PENDING"],
-      ["ALM1A23", "ALM1A23 comment: PENDING"],
+      ["ALM123", "ALM123 comment: "],
+      ["ALM1A23", "ALM1A23 comment: "],
       ["ALMT123", "ALMT123 comment: Form 5"],
       ["ALMT1A23", "ALMT1A23 comment: Form 6"],
       ["ALMN123", "ALMN123 comment: Form 7"],
       ["ALM1T23", "ALM1T23 comment: Form 8"],
       ["ALMST123", "ALMST123 comment: Form 10"],
-      ["ALM12A3", "ALM12A3 comment: PENDING"],
-      ["ALM12W3", "ALM12W3 comment: PENDING"],
-      ["ALM1A2I3", "ALM1A2I3 comment: PENDING"],
-      ["WAL123", "WAL123 comment: PENDING"],
-      ["WAL12A3", "WAL12A3 comment: PENDING"],
-      ["WAL12W3", "WAL12W3 comment: PENDING"],
-      ["WAL1A2W3", "WAL1A2W3 comment: PENDING"],
-      ["WALT12I3", "WALT12I3 comment: PENDING"],
-      ["WALA123", "WALA123 comment: PENDING"],
-      ["WALA12A3", "WALA12A3 comment: PENDING"],
-      ["WALT123", "WALT123 comment: PENDING"],
+      ["ALM12A3", "ALM12A3 comment: "],
+      ["ALM12W3", "ALM12W3 comment: "],
+      ["ALM1A2I3", "ALM1A2I3 comment: "],
+      ["WAL123", "WAL123 comment: "],
+      ["WAL12A3", "WAL12A3 comment: "],
+      ["WAL12W3", "WAL12W3 comment: "],
+      ["WAL1A2W3", "WAL1A2W3 comment: "],
+      ["WALT12I3", "WALT12I3 comment: "],
+      ["WALA123", "WALA123 comment: "],
+      ["WALA12A3", "WALA12A3 comment: "],
+      ["WALT123", "WALT123 comment: "],
       ["WALT1A23", "WALT1A23 comment: PENDING"],
       ["WALAN12A3", "WALAN12A3 comment: PENDING"],
       ["WALA1T2A3", "WALA1T2A3 comment: PENDING"],
@@ -319,10 +322,111 @@ function testFromInitials(score) {
       ["KM123", "KM123 comment: A K at the start of a long term is probably not part of the root"],
       ["KT1A23", "KT1A23 comment: A K at the start of a long term is probably not part of the root"],
       ["K1A23", "K1A23 comment: A K at the start of a long term is probably not part of the root"],
-    
+      ["xyzH", "xyzH comment: "],
+      ["xyzHA", "xyzHA comment: "],
+      ["xyzHM", "xyzHM comment: "],
+      ["xyzHN", "xyzHN comment: "],
+      ["xyzHMA", "xyzHMA comment: "],
+      ["xyzK", "xyzK comment: "],
+      ["xyzKM", "xyzKM comment: "],
+      ["xyzKMA", "xyzKMA comment: "],
+      ["xyzKN", "xyzKN comment: "],
+      ["xyzI", "xyzI comment: "],
+      ["xyzNA", "xyzNA comment: "],
+      ["xyzTH", "xyzTH comment: "],
+      ["xyzTHA", "xyzTHA comment: "],
+      ["xyzTHM", "xyzTHM comment: "],
+      ["xyzTHN", "xyzTHN comment: "],
+      ["xyzTHMA", "xyzTHMA comment: "],
+      ["xyzTK", "xyzTK comment: "],
+      ["xyzTKM", "xyzTKM comment: "],
+      ["xyzTKMA", "xyzTKMA comment: "],
+      ["xyzTKN", "xyzTKN comment: "],
+      ["xyzTI", "xyzTI comment: "],
+      ["xyzTNA", "xyzTNA comment: "],
+      ["xyzATH", "xyzATH comment: "],
+      ["xyzATHA", "xyzATHA comment: "],
+      ["xyzATHM", "xyzATHM comment: "],
+      ["xyzATHN", "xyzATHN comment: "],
+      ["xyzATHMA", "xyzATHMA comment: "],
+      ["xyzATK", " comment: "],
+      ["xyzATKM", " comment: "],
+      ["xyzATKMA", " comment: "],
+      ["xyzATKN", " comment: "],
+      ["xyzATI", " comment: "],
+      ["xyzATNA", " comment: "],
+      ["xzyANAT", " comment: "],
+      ["xyzANATH", " comment: "],
+      ["xyzANATHA", " comment: "],
+      ["xyzANATHM", " comment: "],
+      ["xyzANATHN", " comment: "],
+      ["xyzANATHMA", " comment: "],
+      ["xyzANATK", " comment: "],
+      ["xyzANATKM", " comment: "],
+      ["xyzANATKMA", " comment: "],
+      ["xyzANATKN", " comment: "],
+      ["xyzANATI", " comment: "],
+      ["xyzANATNA", " comment: "],
+      ["xzyANH", " comment: "],
+      ["xyzIATH", " comment: "],
+      ["xyzIATHA", " comment: "],
+      ["xyzIATHM", " comment: "],
+      ["xyzIATHN", " comment: "],
+      ["xyzIATHMA", " comment: "],
+      ["xyzIATK", " comment: "],
+      ["xyzIATKM", " comment: "],
+      ["xyzIATKMA", " comment: "],
+      ["xyzIATKN", " comment: "],
+      ["xyzIATI", " comment: "],
+      ["xyzIATNA", " comment: "],
+      ["xyzT", " comment: "],
+      ["xyzNAH", " comment: "],
+      ["xyzNAHA", " comment: "],
+      ["xyzNAHM", " comment: "],
+      ["xyzNAHN", " comment: "],
+      ["xyzNAHMA", " comment: "],
+      ["xyzNAK", " comment: "],
+      ["xyzNAKM", " comment: "],
+      ["xyzNAKMA", " comment: "],
+      ["xyzNAKN", " comment: "],
+      ["xyzIH", " comment: "],
+      ["xyzIHA", " comment: "],
+      ["xyzIHM", " comment: "],
+      ["xyzIHN", " comment: "],
+      ["xyzIHMA", " comment: "],
+      ["xyzIK", " comment: "],
+      ["xyzIKM", " comment: "],
+      ["xyzIKMA", " comment: "],
+      ["xyzIKN", " comment: "],
+      ["xyzINA", " comment: "],
+      ["xyzTM", " comment: "],
+      ["xyzIN", " comment: "],
+      ["xyzIIN", " comment: "],
+      ["xzyAN", " comment: "],
+      ["xzyIAN", " comment: "],
+      ["xyzWN", " comment: "],
+      ["xyzIWN", " comment: "],
+      ["xyzWA", " comment: "],
+      ["xyzWH", " comment: "],
+      ["xyzWHM", " comment: "],
+      ["xyzWKM", " comment: "],
+      ["xyzWI", " comment: "],
+      ["xyzWHA", " comment: "],
+      ["xyzA", " comment: "],
+      ["xyzIA", " comment: "],
+      ["xyzIAT", " comment: "],
+      ["xyzITIN", " comment: "],
+      ["xyzITAN", " comment: "],
+      // ["XXXX", "XXXX comment: "],
+      // ["XXXX", "XXXX comment: "],
+      // ["XXXX", "XXXX comment: "],
+
+
+
       ]
 
   var conversionKey = [
+    //lower case letters xyz used only for suffix tests
       ["X", "X"],
       ["x", "X"],
       ["Y", "X"],
@@ -351,7 +455,7 @@ function testFromInitials(score) {
 
   //this is going to be the new array of tests
   var convertedTestsArray = []
-  //this cycles though every model
+  //this cycles though every model and converts the English letters/numbers to the ARabic, etc.
   for (let i = 0; i < testsArray.length; i++) {
       //this selects on of the test models
       let thisTest = testsArray[i][0]
@@ -364,17 +468,14 @@ function testFromInitials(score) {
         let thisCharacter = thisTestArray[j][0]
         for (let k = 0; k < conversionKey.length; k++) {
           if (thisCharacter === conversionKey[k][0]) {
- 
             var switchLetter = conversionKey[k][1]
             newTestWordArray.push(switchLetter)
           }
           // console.log("the new test word array is now:")
           // console.log(newTestWordArray)
-        }
-        // var rejoinedTest = newTestWordArray.join("")
+        } 
         // console.log("the rejoined test is:")
         // console.log(rejoinedTest)
-
       }
       // testsArray[i][0] = rejoinedTest[i]
       convertedTestsArray.push(newTestWordArray)
@@ -384,45 +485,83 @@ function testFromInitials(score) {
       testsArray[i][3] = []
   }
   console.log("the tests array is now:")
-  console.log(testsArray)
+  console.log(convertedTestsArray)
 //End of model conversion 
 
-
-console.log("score is:")
-console.log(score)
+// console.log("score is:")
+// console.log(score)
 var numberOfTests = testsArray.length
-console.log("the number of tests to run is " + numberOfTests)
+// console.log("the number of tests to run is " + numberOfTests)
 
-
+//START OF MAIN TEST ROUTINE
 if (score[0] !== undefined) {
   for (let i = 0; i < numberOfTests; i++) {
     let thisTestName = testsArray[i][0]
     let thisTestArray = testsArray[i][2]
     let thisTestScore = testsArray[i][3]
     let thisTestComment = testsArray[i][1]
+    //this is primarily trouble shooting mechanism that could be removed.  
     mainTestResults.testsRan.push(
       thisTestName
       );
-    console.log("the test runnin now is:")
-   console.log(thisTestName)
-    
-    console.log(thisTestComment)
+    // console.log("the test runnin now is:")
+    // console.log(thisTestName)
+    // console.log(thisTestComment)
     let thisTestLength = thisTestArray.length
-    console.log("the length of this test is " + thisTestLength)
-    console.log("the length of the word is " + inputLength)
+    // console.log("the length of this test is " + thisTestLength)
+    // console.log("the length of the word is " + inputLength)
   
+    //tests are not run if the input is shorter than the model
   if (inputLength >= thisTestLength) {
-    console.log("the input is long enough to be tested against " + thisTestName)
+    // console.log("the input is long enough to be tested against " + thisTestName)
+    //this loops through each letter in the model
+
+
+    console.log("the score before attempting to reverse is:")
+    console.log(score)
+          if (thisTestArray[0] === "X") {
+            console.log("we have a suffix test!")
+            console.log(thisTestArray);
+            thisTestArray = thisTestArray.reverse();
+            console.log(thisTestArray);
+            var normalOrderScore = mainTestResults.score
+            console.log("the normal score is")
+            console.log(normalOrderScore)
+            // let reversedScore = score
+            // reversedScore = reversedScore.reverse();
+            mainTestResults.score = mainTestResults.score.reverse();
+            console.log("the reversed score is")
+            console.log(score)
+          } else {
+            var normalOrderScore = []
+          }
+    
+    console.log("the score after reverse is now")
+    console.log(score)
+    
+
+
     for (let pos = 0; pos < thisTestLength; pos++) {
       let character = pos + 1
-       console.log("the position is " + character + " and the characters are:")
-       console.log(thisTestArray[pos])
-       console.log(score[pos][0])
+      //  console.log("the position is " + character + " and the characters are:")
+      //  console.log(thisTestArray[pos])
+      //  console.log(score[pos][0])
+
+      //process for suffix tests.
+      //if position is 0 and it is an X, then flip order of model and the input
+      //note that we later need to reverse this
+
+
+
+
+
+      //the actual scoring mechanism - for every character match, one point is added
+      //the test only passes if there are as many points as the model length
        if (thisTestArray[pos] === "X") {
-        console.log("the input can be anything so the word gets a point")
+        // console.log("the input can be anything so the word gets a point")
         thisTestScore.push(1)
        } else if (thisTestArray[pos] === score[pos][0]) {
-        console.log("the input character matches the test character")
+        // console.log("the input character matches the test character")
         thisTestScore.push(1)
        } else {
         //  console.log("there is not a match") 
@@ -430,17 +569,15 @@ if (score[0] !== undefined) {
       // console.log("the score array for this test is")
       // console.log(thisTestScore) 
       if (thisTestScore.length === thisTestLength) {
-        // console.log("the term passed the test")
+        //this pushes out the comment
         mainTestResults.mainTestOutputComments.push(
           thisTestComment
           );
           //Set new score
-
           for (let pos = 0; pos < thisTestLength; pos++) {
             // console.log("now setting score...")
             if (thisTestArray[pos] === "X") {
               // console.log("the input can be anything so there is no change in score")
-              
              } else if (thisTestArray[pos] === score[pos][0]) {
               // console.log("the input character matches the test character so it loses points")
               // console.log("the score was:")
@@ -457,54 +594,41 @@ if (score[0] !== undefined) {
         // console.log("the term failed the test")
       }
       }
+
+
+      if (normalOrderScore.length > 0) {
+        console.log("we need to flip that score around!")
+        console.log(normalOrderScore)
+        mainTestResults.score = mainTestResults.score.reverse();
+        console.log(score)
+        normalOrderScore = []
+        //this bit may not be needed
+        thisTestArray = thisTestArray.reverse();
+        // console.log(thisTestArray);
+      }
+
+console.log("the score after going back to noraml is")
+console.log(score)
+
+
+
+
+
+
+
+
   } else {
     // console.log("the input is not long enough to be tested against " + thisTestName)
   }
-
-
-   
    }
 }
 
-
-
-
-
-//end function    
+//END OF MAIN TEST testFromInitials function    
 }
-
+//THIS RUNS THE ABOVE FUNCTION
 testFromInitials(score)
 
 //ADITIONAL TESTS ADITIONAL TESTS ADITIONAL TESTS ADITIONAL TESTS ADITIONAL TESTS
-
-// //TESTNOTE: 
-// mainTestResults.testsRan.push(
-//   "M123"
-//   ); 
-//   if (
-//       inputLength > 3 
-//       && 
-//       pos1 === "م"
-//       ) {
-//       mainTestResults.score[0][1] = pos1scr / diff;
-//       mainTestResults.mainTestOutputComments.push(
-//           "If there is an initial meem, it is probably not part of the root."
-//           );
-// }
-
-// //TESTNOTE: 
-// mainTestResults.testsRan.push(
-//   "A123"
-//   ); 
-// if (
-//   inputLength > 4 
-//   && pos1 === "ا"
-//   ) {
-//       mainTestResults.score[0][1] = pos1scr / diff;
-//       mainTestResults.mainTestOutputComments.push(
-//           "Aliphs are usually not part of the root"
-//           );
-//   };
 
 // //TESTNOTE: 
 // mainTestResults.testsRan.push(
@@ -525,9 +649,9 @@ testFromInitials(score)
 //   mainTestResults.ALword = true;
 // }
 
-// //TESTNOTE: 
+//TESTNOTE: 
 // mainTestResults.testsRan.push(
-//   "123HA"
+//   "xyzHA"
 //   );
 // if (
 //   inputLength > 5 
@@ -539,38 +663,35 @@ testFromInitials(score)
 //   mainTestResults.score[inputLength-1][1] = lastPosScr / diff;
 //   mainTestResults.score[inputLength-2][1] = secFrmEndScr / diff;
 //   mainTestResults.mainTestOutputComments.push(
-//       "ِA ها at the end of the word is usually a pronoun"
+//     "A ها at the end of the word is usually a pronoun"
 //       );
 // }
-
-
-
-
 
 
       // END TESTS END TESTS END TESTS END TESTS END TESTS END TESTS END TESTS END TESTS
       // DO NOT ERASE THIS COMMENT  DO NOT ERASE THIS COMMENT  DO NOT ERASE THIS COMMENT  DO NOT ERASE THIS COMMENT
       return mainTestResults
+    //END OF TESTING
       }
 
     render(props) {
         const { newInputObj } = this.props;
         const {score, rawInput, strippedInput} = newInputObj;
-var mainTestResults = this.runMainTests(strippedInput, score);
-      const { ALword, mainTestOutputComments, meemWord, testsRan, verbalNoun } = mainTestResults
-      var mainTestScore = mainTestResults.score
+        var mainTestResults = this.runMainTests(strippedInput, score);
+        const { ALword, mainTestOutputComments, meemWord, testsRan, verbalNoun } = mainTestResults
+        var mainTestScore = mainTestResults.score
 //this may not be necessary
-var finalResultsObject = {
-  rawInput: rawInput, 
-  strippedInput: strippedInput,
-  ALword: ALword,
-  mainTestOutputComments: mainTestOutputComments, 
-  meemWord: meemWord,
-  testsRan: testsRan, 
-  verbalNoun: verbalNoun,
-  score: mainTestScore,
-}
-console.log(finalResultsObject)
+        var finalResultsObject = {
+          rawInput: rawInput, 
+          strippedInput: strippedInput,
+          ALword: ALword,
+          mainTestOutputComments: mainTestOutputComments, 
+          meemWord: meemWord,
+          testsRan: testsRan, 
+          verbalNoun: verbalNoun,
+          score: mainTestScore,
+        }
+// console.log(finalResultsObject)
 
       return (
         <div className="">

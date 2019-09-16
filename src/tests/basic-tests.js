@@ -18,7 +18,7 @@ basicTest(strippedInputArray) {
 	      if (score[i][0] ===	"ب"	) {score[i][1] = score[i][1] 	*	1.25	; score[i][2]  = ["If a ب is at the start of the term, it is probably not part of the root; otherwise it probably is."	]};																													
 	      if (score[i][0] ===	"ج"	) {score[i][1] = score[i][1] 	*	2	; score[i][2]  = ["A ج is always part of the root."	]};																													
 	      if (score[i][0] ===	"د"	) {score[i][1] = score[i][1] 	*	1.75	; score[i][2]  = [	"A د is almost always part of the UNLESS it is substituting for a ت in some rare Form 8 words, in which case it would follow the first radical."	]};																													
-	      if (score[i][0] ===	"ه"	) {score[i][1] = score[i][1] 	/ 	2	; score[i][2]  = [	"The ه ـهـ is often found near the end of a word as part of a pronoun; if it is near the front, it is probably part of the root."	]};																													
+	      if (score[i][0] ===	"ه"	) {score[i][1] = score[i][1] 	/ 	1.25	; score[i][2]  = [	"The ه ـهـ is often found near the end of a word as part of a pronoun; if it is near the front, it is probably part of the root."	]};																													
 	      if (score[i][0] ===	"و"	) {score[i][1] = score[i][1] 	/ 	1.75	; score[i][2]  = [	"The و serves a lot of grammatical functions, but is often part of a root as well, where is sometimes is switched out for an aliph in some forms."	]};																													
 	      if (score[i][0] ===	"ز"	) {score[i][1] = score[i][1] 	*	2	; score[i][2]  = [	"A ز is almost always part of a root."	]};																													
 	      if (score[i][0] ===	"ح"	) {score[i][1] = score[i][1] 	*	2	; score[i][2]  = [	"A ح is always part of a root."	]};																													
